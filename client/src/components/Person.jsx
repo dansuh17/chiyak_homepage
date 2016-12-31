@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
+import { ListGroupItem } from 'react-bootstrap';
 
 const Person = ({ person }) => (
-  <div>
+  <ListGroupItem>
     {person.lastname}, {person.firstname}
-  </div>
+  </ListGroupItem>
 );
 
 Person.propTypes = {

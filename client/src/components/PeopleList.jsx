@@ -1,12 +1,13 @@
 import React, { PropTypes } from 'react';
+import { ListGroup } from 'react-bootstrap';
 import Person from './Person';
 
 const PeopleList = ({ people }) => (
-  <div>
+  <ListGroup>
     {people.map(person =>
       <Person key={person.lastname} person={person} />,
     )}
-  </div>
+  </ListGroup>
 );
 
 PeopleList.propTypes = {
