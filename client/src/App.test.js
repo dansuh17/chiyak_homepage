@@ -1,8 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies, no-undef, react/jsx-filename-extension */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
 
+// do a shallow rendering to eliminate store dependency
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  shallow(<App />);
 });
