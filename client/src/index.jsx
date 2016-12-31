@@ -5,7 +5,8 @@ import { Router, Route, browserHistory } from 'react-router';
 import configureStore from './store/configure-store';
 import App from './App';
 import './index.css';
-import './semantic-ui/semantic.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 
 const store = configureStore();
 
