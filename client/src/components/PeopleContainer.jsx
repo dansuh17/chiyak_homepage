@@ -20,9 +20,11 @@ class PeopleContainer extends Component {
 
     return (
       <div>
-        <PersonInput addPerson={this.props.actions.addPerson} />
+        <PersonInput
+          addPerson={this.props.actions.addPerson}
+          clearPerson={this.props.actions.clearPerson}
+        />
         <PeopleList people={people} />
-        <button onClick={this.props.actions.clearPerson}>Clear</button>
       </div>
     );
   }

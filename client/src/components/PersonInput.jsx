@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import { Button, FormControl } from 'react-bootstrap';
 
 class PersonInput extends Component {
   static componentDidMount() {
@@ -8,30 +9,60 @@ class PersonInput extends Component {
   constructor(props) {
     super(props);
 
+    // why do we do this?
     this.onAddPersonClick = this.onAddPersonClick.bind(this);
+    this.onClearPersonClick = this.onClearPersonClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+
+    // initial state
+    this.state = {
+      firstnameInput: '',
+      lastnameInput: '',
+    };
   }
 
   onAddPersonClick() {
-    const firstNameElement = document.getElementById('firstname');
-    const lastNameElement = document.getElementById('lastname');
-
     this.props.addPerson({
-      firstname: firstNameElement.value,
-      lastname: lastNameElement.value,
+      firstname: this.state.firstnameInput,
+      lastname: this.state.lastnameInput,
     });
 
-    firstNameElement.value = '';
-    lastNameElement.value = '';
+    // return to default state after submitting
+    this.setState({
+      firstnameInput: '',
+      lastnameInput: '',
+    });
 
-    firstNameElement.focus();
+    document.getElementById('firstname').focus();
+  }
+
+  onClearPersonClick() {
+    this.props.clearPerson();
+  }
+
+  handleChange(event) {
+    // sets the state according to input value change
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
   }
 
   render() {
     return (
       <div>
-        <input id="firstname" type="text" placeholder="First Name" />
-        <input id="lastname" type="text" placeholder="Last Name" />
-        <button onClick={this.onAddPersonClick}>Add Person</button>
+        <FormControl
+          type="text" id="firstname" name="firstnameInput" placeholder="First Name"
+          value={this.state.firstnameInput}
+          onChange={this.handleChange}
+        />
+        <FormControl
+          type="text" id="lastname" name="lastnameInput" placeholder="Last Name"
+          value={this.state.lastnameInput}
+          onChange={this.handleChange}
+        />
+        <br />
+        <Button onClick={this.onAddPersonClick}>Add Person</Button>
+        <Button onClick={this.onClearPersonClick}>Clear</Button>
       </div>
     );
   }
@@ -39,6 +70,7 @@ class PersonInput extends Component {
 
 PersonInput.propTypes = {
   addPerson: PropTypes.func.isRequired,
+  clearPerson: PropTypes.func.isRequired,
 };
 
 export default PersonInput;
