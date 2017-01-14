@@ -1,15 +1,11 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import Name from './Name';
+import NameBox from './NameBox';
 
 const Footer = () => (
   <Jumbotron>
     <p>Footer for something</p>
-    <Name myname="Julie" />
-    <Name myname="Daniel" />
-    <Name myname="Josh" />
-    <Name myname="God" />
-    <Name myname="Taeho" />
+    <NameBox />
   </Jumbotron>
 );
 
