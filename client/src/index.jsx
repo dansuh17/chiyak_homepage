@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap-theme.css';
 import configureStore from './store/configure-store';
 import App from './App';
 import Home from './components/Home';
+import News from './components/News';
 import './index.css';
 
 const store = configureStore();
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path="/" component={App}>
         {/* default route */}
         <IndexRoute component={Home} />
+        <Route path="/news" component={News} />
       </Route>
     </Router>
   </Provider>,
