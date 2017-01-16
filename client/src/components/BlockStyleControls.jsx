@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import StyleButton from './StyleButton';
+import './InlineStyleControls.css';
 
+// the list of block types - predefined by draft.js
 const BLOCK_TYPES = [
   { label: 'H1', style: 'header-one' },
   { label: 'H2', style: 'header-two' },
@@ -14,16 +16,17 @@ const BLOCK_TYPES = [
   { label: 'Code Block', style: 'code-block' },
 ];
 
+// buttons that user can click to change the style of the edited contents
 const BlockStyleControls = (props) => {
   const { editorState } = props;
-  const selection = editorState.getSelection();
+  const selection = editorState.getSelection();  // user-selected part?
   const blockType = editorState
     .getCurrentContent()
     .getBlockForKey(selection.getStartKey())
     .getType();
 
   return (
-    <div>
+    <div className="RichEditor-controls">
       {BLOCK_TYPES.map(type =>
         <StyleButton
           key={type.label}

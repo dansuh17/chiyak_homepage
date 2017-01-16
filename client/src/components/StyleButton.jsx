@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import './StyleButton.css';
 
 class StyleButton extends Component {
   constructor() {
@@ -6,12 +7,13 @@ class StyleButton extends Component {
     this.onToggle = (e) => {
       e.preventDefault();
       // calls toggleBlockType() at ContentEditor component
+      // pass the style string to toggleBlockType function
       this.props.onToggle(this.props.style);
     };
   }
 
   render() {
-    let className = 'RichEditory-styleButton';
+    let className = 'RichEditor-styleButton';
     if (this.props.active) {
       className += 'RichEditor-activeButton';
     }

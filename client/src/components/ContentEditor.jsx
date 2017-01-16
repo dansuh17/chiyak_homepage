@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Editor, EditorState, RichUtils } from 'draft-js';
 import BlockStyleControls from './BlockStyleControls';
+import InlineStyleControls from './InlineStyleControls';
+import './ContentEditor.css';
 
 // uses the API from facebook/draft.js
 class ContentEditor extends Component {
@@ -16,6 +18,7 @@ class ContentEditor extends Component {
     this.handleKeyCommand = this.handleKeyCommand.bind(this);
     this.onBoldClick = this.onBoldClick.bind(this);
     this.toggleBlockType = this.toggleBlockType.bind(this);
+    this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
   }
 
   onBoldClick() {
@@ -36,14 +39,29 @@ class ContentEditor extends Component {
   }
 
   toggleBlockType(blockType) {
-    // toggles the appropriate block type (H1, H2, Underline, etc)
+    // toggles the appropriate block type (header-one, ordered-list-item, etc)
     this.onChange(RichUtils.toggleBlockType(
       this.state.editorState,
       blockType));
   }
 
+  toggleInlineStyle(inlineStyle) {
+    this.onChange(RichUtils.toggleInlineStyle(
+      this.state.editorState,
+      inlineStyle));
+  }
+
   render() {
     const { editorState } = this.state;
+
+    // hide placeholder when editing
+    let className = 'RichEditor-editor';
+    const contentState = editorState.getCurrentContent();
+    if (!contentState.hasText()) {
+      if (contentState.getBlockMap().first().getType() !== 'unstyled') {
+        className += ' RichEditor-hidePlaceholder';
+      }
+    }
 
     return (
       <div>
@@ -52,13 +70,19 @@ class ContentEditor extends Component {
           editorState={editorState}
           onToggle={this.toggleBlockType}
         />
-        <Editor
-          editorState={this.state.editorState}
-          handleKeyCommand={this.handleKeyCommand}
-          onChange={this.onChange}
-          ref={(c) => { this.editor = c; }}
-          placeholder="Tell a Story..."
+        <InlineStyleControls
+          editorState={editorState}
+          onToggle={this.toggleInlineStyle}
         />
+        <div className={className}>
+          <Editor
+            editorState={this.state.editorState}
+            handleKeyCommand={this.handleKeyCommand}
+            onChange={this.onChange}
+            ref={(c) => { this.editor = c; }}
+            placeholder="Tell a Story..."
+          />
+        </div>
       </div>
     );
   }
