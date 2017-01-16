@@ -8,6 +8,7 @@ import configureStore from './store/configure-store';
 import App from './App';
 import Home from './components/Home';
 import News from './components/News';
+import Products from './components/Products';
 import './index.css';
 
 const store = configureStore();
@@ -19,6 +20,7 @@ ReactDOM.render(
         {/* default route */}
         <IndexRoute component={Home} />
         <Route path="/news" component={News} />
+        <Route path="/product" component={Products} />
       </Route>
     </Router>
   </Provider>,
