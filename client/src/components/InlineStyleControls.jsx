@@ -11,8 +11,10 @@ const INLINE_STYLES = [
 ];
 
 const InlineStyleControls = (props) => {
-  // gets the current inline style of selected text region
+  // Gets the current inline style of selected text region
+  // Returns an OrderedSet object of inline styles for the editor (refere Immutable.js)
   const currentStyle = props.editorState.getCurrentInlineStyle();
+
   return (
     <div className="RichEditor-controls">
       {INLINE_STYLES.map(type =>

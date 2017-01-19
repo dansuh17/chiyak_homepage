@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Editor, EditorState, RichUtils } from 'draft-js';
+import { AtomicBlockUtils, Editor, EditorState, Entity, RichUtils } from 'draft-js';
 import BlockStyleControls from './BlockStyleControls';
 import InlineStyleControls from './InlineStyleControls';
 import './ContentEditor.css';
+import fblogo from '../img/facebook.png';
 
 // uses the API from facebook/draft.js
 class ContentEditor extends Component {
@@ -14,11 +15,15 @@ class ContentEditor extends Component {
     };
 
     this.focus = () => this.editor.focus();  // ref editor
-    this.onChange = editorState => this.setState({ editorState });
+    this.onChange = editorState => this.setState({ editorState });  // for every changes
+
+    // function bindings
     this.handleKeyCommand = this.handleKeyCommand.bind(this);
     this.onBoldClick = this.onBoldClick.bind(this);
     this.toggleBlockType = this.toggleBlockType.bind(this);
     this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
+    this.addImage = this.addImage.bind(this);
+    this.confirmMedia = this.confirmMedia.bind(this);
   }
 
   onBoldClick() {
@@ -51,16 +56,63 @@ class ContentEditor extends Component {
       inlineStyle));
   }
 
+  // create an atomic block containing the image
+  confirmMedia() {
+    const { editorState } = this.state;
+    // this is how we create an entity of a content block - which contains
+    // image and stays immutable.
+    // Entity.create(<type>, <mutability>, <data>)
+    const entityKey = Entity.create('image', 'IMMUTABLE', { src: fblogo });
+    this.setState({
+      editorState: AtomicBlockUtils.insertAtomicBlock(
+        editorState,
+        entityKey,
+        ' ',
+      ),
+    });
+  }
+
+  // triggered when button is pressed
+  addImage() {
+    this.confirmMedia();
+  }
+
   render() {
     const { editorState } = this.state;
 
     // hide placeholder when editing
+    // TODO: Doesn't seem to work
     let className = 'RichEditor-editor';
     const contentState = editorState.getCurrentContent();
     if (!contentState.hasText()) {
       if (contentState.getBlockMap().first().getType() !== 'unstyled') {
         className += ' RichEditor-hidePlaceholder';
       }
+    }
+
+    // Media that wraps the Image tag
+    const Media = (props) => {
+      const entity = Entity.get(props.block.getEntityAt(0));
+      const { src } = entity.getData();
+      const type = entity.getType();
+
+      let media;
+      if (type === 'image') {
+        media = <img src={src} alt="#" />;
+      }
+      return media;
+    };
+
+    // the function to pass on to blockRendererFn
+    function mediaBlockRenderer(block) {
+      // we can know this is atomic since we used AtomicBlockUtils to create it
+      if (block.getType() === 'atomic') {
+        return {
+          component: Media,
+          editable: false,
+        };
+      }
+      return {};  // TODO: better way of returning nothing?
     }
 
     return (
@@ -74,8 +126,10 @@ class ContentEditor extends Component {
           editorState={editorState}
           onToggle={this.toggleInlineStyle}
         />
+        <button onMouseDown={this.addImage}>Add Image</button>
         <div className={className}>
           <Editor
+            blockRendererFn={mediaBlockRenderer}
             editorState={this.state.editorState}
             handleKeyCommand={this.handleKeyCommand}
             onChange={this.onChange}

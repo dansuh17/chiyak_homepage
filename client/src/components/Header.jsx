@@ -8,7 +8,7 @@ const Header = () => (
     <Grid>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href=".../index"><img className="logoimg" src={logoimg} alt="#" /></a>
+          <a href="/"><img className="logoimg" src={logoimg} alt="#" /></a>
         </Navbar.Brand>
         <Nav>
           {/* Contains the link to each pages */}
