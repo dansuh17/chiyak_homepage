@@ -4,7 +4,6 @@ import SnsLink from './SnsLink';
 
 const Footer = () => (
   <Jumbotron>
-    <p>Place for Footer</p>
     <SnsLink />
   </Jumbotron>
 );

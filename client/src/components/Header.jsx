@@ -1,12 +1,14 @@
 import React from 'react';
 import { Grid, Nav, NavItem, Navbar } from 'react-bootstrap';
+import logoimg from '../img/chiyakLogo.png';
+import './Header.css';
 
 const Header = () => (
   <Navbar bsStyle="default" fixedTop>
     <Grid>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="/">React App</a>
+          <a href=".../index"><img className="logoimg" src={logoimg} alt="#" /></a>
         </Navbar.Brand>
         <Nav>
           {/* Contains the link to each pages */}

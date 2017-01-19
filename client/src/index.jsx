@@ -9,6 +9,8 @@ import App from './App';
 import Home from './components/Home';
 import News from './components/News';
 import Products from './components/Products';
+import Contact from './components/Contact';
+import About from './components/About';
 import './index.css';
 
 const store = configureStore();
@@ -21,6 +23,8 @@ ReactDOM.render(
         <IndexRoute component={Home} />
         <Route path="/news" component={News} />
         <Route path="/product" component={Products} />
+        <Route path="/contact" components={Contact} />
+        <Route path="/about" component={About} />
       </Route>
     </Router>
   </Provider>,
