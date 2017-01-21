@@ -1,30 +1,32 @@
 import React from 'react';
-import { Jumbotron, Button } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 import logo from '../logo.svg';
-import PeopleContainer from './PeopleContainer';
+import './Home.css';
 
 const Home = () => (
-  <Jumbotron>
+  <div>
+    <Jumbotron>
+      <div className="MainDiv">
+        <h2>좋은치약 홈페이지</h2>
+      </div>
+    </Jumbotron>
     <div className="App-header">
       {/* spinning logo */}
       <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React</h2>
-      <p>
-        <Button
-          bsStyle="success"
-          bsSize="large"
-          href="http://react-bootstrap.github.io/components.html"
-          target="_blank"
-        >
-          View React Bootstrap Docs
-        </Button>
-      </p>
     </div>
-    <p className="App-intro">
-      To get Started...
+    <p>
+      치약 사진 + 짧은 글
     </p>
-    <PeopleContainer />
-  </Jumbotron>
+    <p>
+      Team 사진 + 짧은 글
+    </p>
+    <p>
+      구매처 + 짧은 글
+    </p>
+    <p>
+      오프라인 구매처
+    </p>
+  </div>
 );
 
 export default Home;

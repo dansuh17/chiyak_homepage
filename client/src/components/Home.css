@@ -1,0 +1,22 @@
+.Main-img {
+  width: 100%;
+}
+
+.MainDiv {
+  background-image: url('../img/main.jpeg');
+  background-size: cover;
+  padding-top: 100px;
+  height: 500px;
+  vertical-align: middle;
+}
+
+/* set the width to 200px if the device's width is 200px or smaller */
+@media (max-width: 200px) {
+  .Main-img {
+    width: 200px;
+  }
+
+  .MainDiv {
+    height: 200px;
+  }
+}
