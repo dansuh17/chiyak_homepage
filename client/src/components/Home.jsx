@@ -6,8 +6,8 @@ import './Home.css';
 const Home = () => (
   <div>
     <Jumbotron>
-      <div className="MainDiv">
-        <h2>좋은치약 홈페이지</h2>
+      <div className="col12 MainDiv">
+        <h2 className="col5 TitleCaption">좋은치약 홈페이지</h2>
       </div>
     </Jumbotron>
     <div className="App-header">

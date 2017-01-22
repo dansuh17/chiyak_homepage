@@ -1,11 +1,11 @@
 import React from 'react';
-import { Jumbotron } from 'react-bootstrap';
 import SnsLink from './SnsLink';
+import './Footer.css';
 
 const Footer = () => (
-  <Jumbotron>
+  <div className="col12 footer">
     <SnsLink />
-  </Jumbotron>
+  </div>
 );
 
 export default Footer;

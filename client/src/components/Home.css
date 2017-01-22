@@ -1,22 +1,17 @@
-.Main-img {
-  width: 100%;
-}
-
 .MainDiv {
   background-image: url('../img/main.jpeg');
   background-size: cover;
-  padding-top: 100px;
-  height: 500px;
-  vertical-align: middle;
+  max-width: 100%; /* Never scales above its original size */
 }
 
-/* set the width to 200px if the device's width is 200px or smaller */
-@media (max-width: 200px) {
-  .Main-img {
-    width: 200px;
-  }
+.TitleCaption {
+  padding-top: 10%;
+  padding-bottom: 30%;
+  color: white;
+}
 
-  .MainDiv {
-    height: 200px;
+@media (max-width: 575px) {
+  .TitleCaption {
+    font-size: 1.2em;
   }
 }
