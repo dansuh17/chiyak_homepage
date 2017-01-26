@@ -32,8 +32,7 @@ body {
 
 [class*="col-"] {
   float: left;
-  clear: both;
-  display: table;
+  padding: 15px;
 }
 
 .App {
