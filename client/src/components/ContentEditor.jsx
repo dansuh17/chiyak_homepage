@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AtomicBlockUtils, Editor, EditorState, Entity, RichUtils } from 'draft-js';
+import { AtomicBlockUtils, Editor, EditorState, RichUtils } from 'draft-js';
 import BlockStyleControls from './BlockStyleControls';
 import InlineStyleControls from './InlineStyleControls';
 import './ContentEditor.css';
@@ -9,6 +9,7 @@ import fblogo from '../img/facebook.png';
 class ContentEditor extends Component {
   constructor(props) {
     super(props);
+
     // initial state of the editor == empty
     this.state = {
       editorState: EditorState.createEmpty(),
@@ -61,11 +62,23 @@ class ContentEditor extends Component {
     const { editorState } = this.state;
     // this is how we create an entity of a content block - which contains
     // image and stays immutable.
-    // Entity.create(<type>, <mutability>, <data>)
-    const entityKey = Entity.create('image', 'IMMUTABLE', { src: fblogo });
+    // changed since API 0.10
+    // entity should have three properties : type, mutability, data
+    const contentState = editorState.getCurrentContent();
+    const contentStateWithEntity = contentState.createEntity(
+      'image',
+      'IMMUTABLE',
+      { src: fblogo },
+    );
+    const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
+    const newEditorState = EditorState.set(
+      editorState,
+      { currentContent: contentStateWithEntity },
+    );
+
     this.setState({
       editorState: AtomicBlockUtils.insertAtomicBlock(
-        editorState,
+        newEditorState,
         entityKey,
         ' ',
       ),
@@ -90,9 +103,13 @@ class ContentEditor extends Component {
       }
     }
 
-    // Media that wraps the Image tag
+    /**
+      Media Component that wraps the Image tag
+     */
     const Media = (props) => {
-      const entity = Entity.get(props.block.getEntityAt(0));
+      // entityKey is a string key associated with that entity when it was created
+      const entity = contentState.getEntity(props.block.getEntityAt(0));
+      // remember that entity should contain type, mutability, and data
       const { src } = entity.getData();
       const type = entity.getType();
 
@@ -127,6 +144,7 @@ class ContentEditor extends Component {
           onToggle={this.toggleInlineStyle}
         />
         <button onMouseDown={this.addImage}>Add Image</button>
+        {/* The Actual Editor! */}
         <div className={className}>
           <Editor
             blockRendererFn={mediaBlockRenderer}
