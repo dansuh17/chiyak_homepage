@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { AtomicBlockUtils, Editor, EditorState, RichUtils } from 'draft-js';
+import { AtomicBlockUtils, Editor, EditorState, RichUtils, convertToRaw } from 'draft-js';
 import BlockStyleControls from './BlockStyleControls';
 import InlineStyleControls from './InlineStyleControls';
+import Client from '../Client';
 import './ContentEditor.css';
 import fblogo from '../img/facebook.png';
 
@@ -25,6 +26,7 @@ class ContentEditor extends Component {
     this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
     this.addImage = this.addImage.bind(this);
     this.confirmMedia = this.confirmMedia.bind(this);
+    this.post = this.post.bind(this);
   }
 
   onBoldClick() {
@@ -90,6 +92,17 @@ class ContentEditor extends Component {
     this.confirmMedia();
   }
 
+  post() {
+    const { editorState } = this.state;
+    const contentState = editorState.getCurrentContent();
+    // store the raw version of current editor state
+    Client.postNews(convertToRaw(contentState));
+  }
+
+  /**
+   * RENDER
+   * @returns {XML}
+   */
   render() {
     const { editorState } = this.state;
 
@@ -144,6 +157,7 @@ class ContentEditor extends Component {
           onToggle={this.toggleInlineStyle}
         />
         <button onMouseDown={this.addImage}>Add Image</button>
+        <button onMouseDown={this.post}>Post</button>
         {/* The Actual Editor! */}
         <div className={className}>
           <Editor
