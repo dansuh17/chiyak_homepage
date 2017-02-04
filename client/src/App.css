@@ -1,4 +1,17 @@
+@font-face {
+  font-family: 'modern_gothic';
+  src: url('../public/modern_gothic_font.ttf') format('truetype');
+  src: url('../public/modern_gothic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'nanum_yet_gothic';
+  src: url('../public/NanumBarunGothic-YetHangul.ttf') format('truetype');
+  src: url('../public/NanumBarunGothicOTF-YetHangul.otf') format('truetype');
+}
+
 .App {
+  font-family: 'modern_gothic', Helvetica Neue, sans-serif;
   text-align: center;
 }
 
