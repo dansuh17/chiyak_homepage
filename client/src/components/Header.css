@@ -1,3 +1,8 @@
 .logoimg {
   width: 3em;
 }
+
+.header {
+  background-image: none;
+  background-color: white;
+}
