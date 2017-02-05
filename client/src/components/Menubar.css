@@ -1,24 +1,20 @@
 .header2 {
-    top: 48px;
-    background-image: none;
-    background-color: lightblue;
-    border-color: lightblue;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-align-content: center;
+  top: 48px;
+  background-image: none;
+  background-color: lightblue;
+  border-color: lightblue;
 }
 
-.menu-text {
-    align-content: center;
-    color: red;
+.nav-collapse-container {
+  /* 항목들 중앙정렬시켜주는 부분 */
+  float: right;
+  position: relative;
+  right: 50%;
+  text-align: left;
 }
 
-.nav-collapse-container{
-    color : red;
-    background-color: red;
-    text-emphasis-color: red;
-    display: flex;
-    align-items: center;
+.nav-center {
+  /* 항목들 중앙정렬시켜주는 부분 */
+  position: relative;
+  left: 50%;
 }

@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'nanum_yet_gothic';
-  src: url('../public/NanumBarunGothic-YetHangul.ttf') format('truetype');
-  src: url('../public/NanumBarunGothicOTF-YetHangul.otf') format('truetype');
+  src: url('../public/nanum_yet_gothic.ttf') format('truetype');
+  src: url('../public/nanum_yet_gothic.otf') format('truetype');
 }
 
 .App {
