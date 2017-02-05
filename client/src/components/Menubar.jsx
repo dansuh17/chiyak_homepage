@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import React from 'react';
 import { Nav, NavItem, Navbar } from 'react-bootstrap';
 import './Menubar.css';
@@ -10,10 +11,10 @@ const Menubar = () => (
     <Navbar.Collapse className="nav-collapse-container">
       <Nav>
         {/* Contains the link to each pages */}
-        <NavItem clssName="text" eventKey={1} href="/about">About</NavItem>
-        <NavItem eventKey={2} href="/news">새소식</NavItem>
-        <NavItem eventKey={3} href="/product">Product</NavItem>
-        <NavItem eventKey={4} href="/contact">Contact</NavItem>
+        <NavItem clssName="menu-text" eventKey={1}><Link to="/About">About</Link></NavItem>
+        <NavItem eventKey={2}><Link to="/News">새소식</Link></NavItem>
+        <NavItem eventKey={3}><Link to="/Products">Product</Link></NavItem>
+        <NavItem eventKey={4}><Link to="/Contact">Contact</Link></NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>

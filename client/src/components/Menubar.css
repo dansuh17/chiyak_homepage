@@ -3,9 +3,14 @@
     background-image: none;
     background-color: lightblue;
     border-color: lightblue;
-    text-align-all : center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
 }
 
-.nav-collapse-container {
+.menu-text {
+    align-content: center;
+    color: red;
 }
-
