@@ -14,3 +14,11 @@
     align-content: center;
     color: red;
 }
+
+.nav-collapse-container{
+    color : red;
+    background-color: red;
+    text-emphasis-color: red;
+    display: flex;
+    align-items: center;
+}
