@@ -1,10 +1,35 @@
 import React, { Component } from 'react';
-import { AtomicBlockUtils, Editor, EditorState, RichUtils, convertToRaw } from 'draft-js';
+import { AtomicBlockUtils, EditorState, RichUtils, convertToRaw } from 'draft-js';
+import Editor, { composeDecorators } from 'draft-js-plugins-editor';
+import createImagePlugin from 'draft-js-image-plugin';
+import createAlignmentPlugin from 'draft-js-alignment-plugin';
+import createFocusPlugin from 'draft-js-focus-plugin';
+import createResizeablePlugin from 'draft-js-resizeable-plugin';
+import createDndPlugin from 'draft-js-dnd-plugin';
+import 'draft-js-image-plugin/lib/plugin.css';
 import BlockStyleControls from './BlockStyleControls';
 import InlineStyleControls from './InlineStyleControls';
 import Client from '../Client';
 import './ContentEditor.css';
 import fblogo from '../img/facebook.png';
+
+// list of plugins for Unicorn Editor
+const focusPlugin = createFocusPlugin();
+const resizeablePlugin = createResizeablePlugin();
+const dndPlugin = createDndPlugin();
+const alignmentPlugin = createAlignmentPlugin();
+const { AlignmentTool } = alignmentPlugin;
+
+const decorator = composeDecorators(
+  resizeablePlugin.decorator,
+  alignmentPlugin.decorator,
+  focusPlugin.decorator,
+  dndPlugin.decorator,
+);
+
+const imagePlugin = createImagePlugin({ decorator });
+
+const plugins = [focusPlugin, resizeablePlugin, dndPlugin, alignmentPlugin, imagePlugin];
 
 // uses the API from facebook/draft.js
 class ContentEditor extends Component {
@@ -14,6 +39,8 @@ class ContentEditor extends Component {
     // initial state of the editor == empty
     this.state = {
       editorState: EditorState.createEmpty(),
+      file: null,
+      fileResult: null,
     };
 
     this.focus = () => this.editor.focus();  // ref editor
@@ -27,6 +54,8 @@ class ContentEditor extends Component {
     this.addImage = this.addImage.bind(this);
     this.confirmMedia = this.confirmMedia.bind(this);
     this.post = this.post.bind(this);
+    this.uploadImageChange = this.uploadImageChange.bind(this);
+    this.uploadImage = this.uploadImage.bind(this);
   }
 
   onBoldClick() {
@@ -100,6 +129,42 @@ class ContentEditor extends Component {
   }
 
   /**
+   * Reads in and saves the file when the user selects a file.
+   * @param event
+   */
+  uploadImageChange(event) {
+    event.preventDefault();
+
+    const reader = new FileReader();
+    const file = event.target.files[0];
+
+    // save the file info when the read is complete
+    reader.onloadend = (ev) => {
+      this.setState({
+        file,
+        fileResult: ev.currentTarget.result,
+      });
+    };
+
+    console.log(`File Read complete: ${file}`);  // eslint-disable-line
+    reader.readAsDataURL(file);
+  }
+
+  /**
+   * Upload the image file to server.
+   * @param event
+   */
+  uploadImage(event) {
+    event.preventDefault();
+    console.log('Uploading -', this.state.file);  // eslint-disable-line
+    Client.imageFileUpload(this.state.file);
+  }
+
+  focus() {
+    this.editor.focus();
+  }
+
+  /**
    * RENDER
    * @returns {XML}
    */
@@ -158,8 +223,15 @@ class ContentEditor extends Component {
         />
         <button onMouseDown={this.addImage}>Add Image</button>
         <button onMouseDown={this.post}>Post</button>
-        {/* The Actual Editor! */}
-        <div className={className}>
+        <br />
+        <form onSubmit={this.uploadImage}>
+          <input type="file" onChange={this.uploadImageChange} name="myfile" accept="image/*" />
+          <button type="submit" onClick={this.uploadImage}>Upload</button>
+        </form>
+        <div  // eslint-disable-line jsx-a11y/no-static-element-interactions
+          className={className}
+          onClick={this.focus}
+        >
           <Editor
             blockRendererFn={mediaBlockRenderer}
             editorState={this.state.editorState}
@@ -167,7 +239,9 @@ class ContentEditor extends Component {
             onChange={this.onChange}
             ref={(c) => { this.editor = c; }}
             placeholder="Tell a Story..."
+            plugins={plugins}
           />
+          <AlignmentTool />
         </div>
       </div>
     );

@@ -7,7 +7,28 @@ function checkStatus(response) {
   throw error;
 }
 
-// post the news from the ContentEditor component
+/**
+ * Upload the file to the server.
+ * @param fileData
+ */
+function imageFileUpload(fileData) {
+  // this represents a multipart/form-data type
+  const formData = new FormData();
+  formData.append('myfile', fileData);
+
+  const options = {
+    method: 'POST',
+    body: formData,
+  };
+
+  fetch('/api/upload', options)
+    .then(checkStatus);
+}
+
+/**
+ * Post the editor contents in raw form to server.
+ * @param rawContent
+ */
 function postNews(rawContent) {
   const options = {
     method: 'PUT',
@@ -22,5 +43,5 @@ function postNews(rawContent) {
     .then(checkStatus);
 }
 
-const Client = { postNews };
+const Client = { postNews, imageFileUpload };
 export default Client;

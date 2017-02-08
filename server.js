@@ -3,6 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const multer = require('multer');
 
 // open up express server
 const app = express();
@@ -30,6 +31,15 @@ db.once('open', () => console.log('connected to mongodb server'));
 
 app.put('/api/news/post', (req, res) => {
   console.log(req.body);
+});
+
+// file upload
+const upload = multer({ dest: './client/src/img/' });
+// the 'myfile' should be specified as key of form data
+app.post('/api/upload/', upload.single('myfile'), (req, res, next) => {
+  console.log(req.body);  // form fields other than file
+  console.log(req.file);  // file of key 'myfile'
+  res.status(204).end();
 });
 
 // start listening at designated port
