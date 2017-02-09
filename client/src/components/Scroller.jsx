@@ -24,9 +24,9 @@ class Scroller extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-default navbar-fixed-top">
-          <div className="container-fluid">
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <nav>
+          <div>
+            <div>
               <ul className="nav navbar-nav">
                 <li>
                   <Link
