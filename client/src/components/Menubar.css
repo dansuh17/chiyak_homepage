@@ -1,5 +1,5 @@
 .header2 {
-  top: 48px;
+  top: 70px;
   background-image: none;
   background-color: lightblue;
   border-color: lightblue;
@@ -17,4 +17,19 @@
   /* 항목들 중앙정렬시켜주는 부분 */
   position: relative;
   left: 50%;
+  font-size: large;
+}
+
+.nav-center a{
+  color : black;
+}
+
+.nav-center a:hover{
+  color : white;
+  text-decoration: none;
+}
+
+.navbar-collapse {
+  top: 50px;
+  position: relative;
 }
