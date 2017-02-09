@@ -15,7 +15,23 @@
   color:red !important;
 }
 
-.navbar navbar-default navbar-fixed-top-2 {
+.scrollnav {
   position: fixed;
-  top : 200px;
+  top: 50px;
+  width: 100vw;
+  height: 50px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  vertical-align: middle;
+}
+
+.scrollnav-item {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: tomato;
+  text-align: center;
 }
