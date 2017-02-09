@@ -3,9 +3,7 @@ import './Menubar.css';
 import Scroller from './Scroller';
 
 const Menubar = () => (
-  <div>
-    <Scroller />
-  </div>
+  <Scroller />
   /* <Navbar bsStyle="default" className="header2" fixedTop collapseOnSelect>
     <Navbar.Header>
       <Navbar.Toggle />

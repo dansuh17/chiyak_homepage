@@ -6,3 +6,7 @@
   background-image: none;
   background-color: white;
 }
+
+.container {
+  height : 80px;
+}

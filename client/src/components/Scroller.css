@@ -14,3 +14,8 @@
 .active {
   color:red !important;
 }
+
+.navbar navbar-default navbar-fixed-top-2 {
+  position: fixed;
+  top : 200px;
+}

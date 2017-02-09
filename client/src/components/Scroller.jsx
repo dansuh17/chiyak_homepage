@@ -24,7 +24,7 @@ class Scroller extends Component {
   render() {
     return (
       <div>
-        <nav>
+        <nav className="navbar navbar-default navbar-fixed-top-2">
           <div>
             <div>
               <ul className="nav navbar-nav">
@@ -35,7 +35,7 @@ class Scroller extends Component {
                     to="test1"
                     spy
                     smooth
-                    duration={500}
+                    duration={550}
                   >
                     Test 1
                   </Link>
