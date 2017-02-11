@@ -4,6 +4,7 @@ import './Scroller.css';
 import Products from './Products';
 import Community from './Community';
 import OurCompany from './OurCompany';
+import Home from './Home';
 
 // refer to documents of react-scroll github readme.
 class Scroller extends Component {
@@ -40,6 +41,17 @@ class Scroller extends Component {
           <Link
             activeClass="active"
             className="scrollnav-item"
+            to="home"
+            spy
+            smooth
+            duration={550}
+            offset={this.state.offsetHeight}
+          >
+            HOME
+          </Link>
+          <Link
+            activeClass="active"
+            className="scrollnav-item"
             to="products"
             spy
             smooth
@@ -72,6 +84,9 @@ class Scroller extends Component {
           </Link>
         </nav>
 
+        <Element name="home" className="element">
+          <Home />
+        </Element>
         <Element name="products" className="element">
           <Products />
         </Element>

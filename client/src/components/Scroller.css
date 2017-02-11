@@ -4,7 +4,7 @@
 }
 
 .element {
-  height:1000px;
+  height:auto;
   background-color: #ededed;
   font-size: 45px;
   border-top:1px solid #000;
@@ -30,6 +30,7 @@
   justify-content: center;
   flex-direction: row;
   vertical-align: middle;
+  z-index: 10;
 }
 
 .scrollnav-item {

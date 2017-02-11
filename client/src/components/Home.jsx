@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Grid, Jumbotron } from 'react-bootstrap';
-import logo from '../logo.svg';
+import logo from '../img/tooth.jpeg';
 import './Home.css';
 
 const Home = () => (
