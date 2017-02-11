@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link, Element, Events, scrollSpy } from 'react-scroll';
 import './Scroller.css';
+import Products from './Products';
+import Community from './Community';
+import OurCompany from './OurCompany';
 
 // refer to documents of react-scroll github readme.
 class Scroller extends Component {
@@ -37,60 +40,46 @@ class Scroller extends Component {
           <Link
             activeClass="active"
             className="scrollnav-item"
-            to="test1"
+            to="products"
             spy
             smooth
             duration={550}
             offset={this.state.offsetHeight}
           >
-            Test 1
+            PRODUCT
           </Link>
           <Link
             activeClass="active"
             className="scrollnav-item"
-            to="test2"
+            to="community"
             spy
             smooth
             duration={500}
             offset={this.state.offsetHeight}
           >
-            Test 2
+            COMMUNITY
           </Link>
           <Link
             activeClass="active"
             className="scrollnav-item"
-            to="test3"
+            to="ourcompany"
             spy
             smooth
             duration={500}
             offset={this.state.offsetHeight}
           >
-            Test 3
-          </Link>
-          <Link
-            activeClass="active"
-            className="scrollnav-item"
-            to="test4"
-            spy
-            smooth
-            duration={500}
-            offset={this.state.offsetHeight}
-          >
-            Test 4
+            OURCOMPANY
           </Link>
         </nav>
 
-        <Element name="test1" className="element" >
-          test 1
+        <Element name="products" className="element">
+          <Products />
         </Element>
-        <Element name="test2" className="element">
-          test 2
+        <Element name="community" className="element">
+          <Community />
         </Element>
-        <Element name="test3" className="element">
-          test 3
-        </Element>
-        <Element name="test4" className="element">
-          test 4
+        <Element name="ourcompany" className="element">
+          <OurCompany />
         </Element>
       </div>
     );
@@ -98,4 +87,3 @@ class Scroller extends Component {
 }
 
 export default Scroller;
-
