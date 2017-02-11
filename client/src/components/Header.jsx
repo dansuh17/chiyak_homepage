@@ -10,9 +10,8 @@ const Header = () => (
         <a href="/"><img className="logoimg" src={logoimg} alt="#" /></a>
       </Navbar.Brand>
       <Nav>
-        <NavItem>{'"치약을 만듭니다"'}</NavItem>
+        <NavItem className="nav-item">{'"치약을 만듭니다"'}</NavItem>
       </Nav>
-      <Navbar.Toggle />
     </Navbar.Header>
   </Navbar>
 );

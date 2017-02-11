@@ -3,10 +3,15 @@
 }
 
 .header {
-  background-image: none;
-  background-color: white;
+  background: white none;
+}
+
+.nav-item {
+  float: left;
+  margin: 0;
 }
 
 .container {
   height : 50px;
 }
+

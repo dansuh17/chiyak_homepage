@@ -35,11 +35,19 @@
 .scrollnav-item {
   width: 60px;
   display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
   justify-content: center;
   flex-direction: column;
   background: #663333;
   text-align: center;
   color : #999999;
+}
+
+@media screen and (max-width: 760px) {
+  .scrollnav-item {
+    margin: 0 0 0 0;
+  }
 }
 
 .scrollnav-item:hover{
