@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link, Element, Events, scrollSpy } from 'react-scroll';
-import './Scroller.css';
 import Products from './Products';
 import Community from './Community';
 import OurCompany from './OurCompany';
 import Home from './Home';
+import './Scroller.css';
 
 // refer to documents of react-scroll github readme.
 class Scroller extends Component {

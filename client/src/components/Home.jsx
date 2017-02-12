@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Row, Grid, Jumbotron } from 'react-bootstrap';
-import logo from '../img/tooth.jpeg';
+import logo from '../logo.svg';
 import './Home.css';
 
 const Home = () => (
@@ -64,21 +64,18 @@ const Home = () => (
       </Col>
     </Row>
     <Grid>
-      <Row className="row-padding">
+      <Row>
         <Jumbotron>
           Team 사진 + 짧은 글
         </Jumbotron>
       </Row>
     </Grid>
     <Grid>
-      <Row className="row-padding">
+      <Row>
         <Col md={12} sm={12}>
           구매처 + 짧은 글
         </Col>
       </Row>
-    </Grid>
-    <Grid>
-      오프라인 구매처
     </Grid>
   </div>
 );
