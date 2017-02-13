@@ -1,3 +1,4 @@
 .footer {
   background: lightgray;
+  z-index : 10;
 }
