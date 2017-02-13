@@ -1,0 +1,29 @@
+.community-container {
+  margin: 0 3% 0 3%;
+}
+
+.community {
+  font-size: 3em;
+  text-align: left;
+  margin: 0;
+}
+
+.community-linkbox {
+  background-color: lightsteelblue;
+  border: 1px solid;
+  margin-bottom: 3%;
+}
+
+#community-titlebox {
+  padding-bottom: 0;
+  margin-top: 2%;
+}
+
+#community-imagebox {
+  padding: 1% 3% 3% 3%;
+  border-right: 1px solid black;
+}
+
+#linkbox-container {
+  padding: 0 3% 3% 3%;
+}
