@@ -1,7 +1,8 @@
 import React from 'react';
+import ChiyakIntro from './ChiyakIntro';
 
 const OurCompany = () => (
-  <p>Paper Company, Let go swiss</p>
+  <ChiyakIntro />
 );
 
 export default OurCompany;
