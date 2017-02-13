@@ -4,6 +4,20 @@
   max-width: 100%; /* Never scales above its original size */
 }
 
+h3 {
+  color: tomato;
+  margin: 2% 0 2% 0;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: tomato;
+  text-decoration: none;
+}
+
 .TitleCaption {
   font-family: 'nanum_yet_gothic', 'modern_gothic', sans-serif;
   padding-top: 10%;
@@ -11,22 +25,32 @@
   color: white;
 }
 
-.home-subtitle1 {
-  margin: 3%;
-  padding: 3%;
-  border-top: 1px black solid;
-  border-bottom: 1px black solid;
-}
-
-.home-subsection {
-  padding-top: 1%;
-  padding-bottom: 1%;
-  border-left: 1px black solid;
-  border-right: 1px black solid;
-}
-
 @media (max-width: 575px) {
   .TitleCaption {
     font-size: 1.2em;
   }
+}
+
+.home-subtitle1 {
+  margin-top: 4%;
+}
+
+.row-padding {
+  padding-bottom: 3%;
+}
+
+.home-subsection {
+  font-size: 1.5em;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+@media (max-width: 1200px) {
+  .home-subsection {
+    font-size: 1.2em;
+  }
+}
+
+.subsection-body {
+  margin-top: 5%;
 }

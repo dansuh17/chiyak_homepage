@@ -1,82 +1,37 @@
 import React from 'react';
-import { Col, Row, Grid, Jumbotron } from 'react-bootstrap';
-import logo from '../logo.svg';
+import { Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router';
 import './Home.css';
 
 const Home = () => (
   <div>
     <div className="col12 MainDiv">
-      <h2 className="col5 TitleCaption">좋은치약 홈페이지</h2>
+      <h1 className="col5 TitleCaption">좋은치약 홈페이지</h1>
     </div>
-    <div className="App-header">
-      {/* spinning logo */}
-      <img src={logo} className="App-logo" alt="logo" />
-    </div>
-    <h2 className="home-subtitle1">좋은 치약</h2>
+    <h1 className="home-subtitle1">
+      {/* Go to another page */}
+      <Link to="/somewhere">치약의 개념을 바로잡다</Link>
+    </h1>
     <Row className="row-padding">
-      <Col className="home-subsection" sm={12} md={3}>
-        <h6>글 하나</h6>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaeca tcupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+      <Col className="home-subsection" xs={12} sm={12} md={4}>
+        <h3>신선한 치약</h3>
+        <div className="subsection-body">
+          이를 닦고 귤을 맛있게 먹을 수 있는 치약
         </div>
       </Col>
-      <Col className="home-subsection" sm={12} md={3}>
-        <h6>글 둘</h6>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaeca tcupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+      <Col className="home-subsection" xs={12} sm={12} md={4}>
+        <h3>안전한 치약</h3>
+        <div className="subsection-body">
+          어린이와 임산부도 안심하고 쓸 수 있는 치약
         </div>
       </Col>
-      <Col className="home-subsection" sm={12} md={3}>
-        <h6>글 셋</h6>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaeca tcupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
-        </div>
-      </Col>
-      <Col className="home-subsection" sm={12} md={3}>
-        <h6>글 넷</h6>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-          incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaeca tcupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+      <Col className="home-subsection" xs={12} sm={12} md={4}>
+        <h3>편안한 치약</h3>
+        <div className="subsection-body">
+          합성계면활성제가 없는 저자극 치약
         </div>
       </Col>
     </Row>
-    <Grid>
-      <Row>
-        <Jumbotron>
-          Team 사진 + 짧은 글
-        </Jumbotron>
-      </Row>
-    </Grid>
-    <Grid>
-      <Row>
-        <Col md={12} sm={12}>
-          구매처 + 짧은 글
-        </Col>
-      </Row>
-    </Grid>
   </div>
 );
 

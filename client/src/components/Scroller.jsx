@@ -55,7 +55,7 @@ class Scroller extends Component {
             to="products"
             spy
             smooth
-            duration={550}
+            duration={500}
             offset={this.state.offsetHeight}
           >
             PRODUCT
