@@ -1,5 +1,13 @@
 .drchoi{
-    height : 200px;
+    height : 300px;
     width : auto;
     float : left;
+}
+
+.jumbotron {
+    padding : 5px;
+}
+
+.intro {
+    font-size : 1.2em;
 }
