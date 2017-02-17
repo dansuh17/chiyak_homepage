@@ -9,6 +9,7 @@ import Products from './components/Products';
 import Contact from './components/Contact';
 import About from './components/About';
 import Main from './components/Main';
+import ProductDetail from './components/ProductDetail';
 import './index.css';
 
 ReactDOM.render(
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Route path="/product" component={Products} />
       <Route path="/contact" components={Contact} />
       <Route path="/about" component={About} />
+      <Route path="/productDetail" component={ProductDetail} />
     </Route>
   </Router>,
   document.getElementById('root'),

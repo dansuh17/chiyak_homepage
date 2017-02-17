@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { Row, Col } from 'react-bootstrap';
 import productImage from '../img/products.jpeg';
 import './Products.css';
@@ -7,7 +8,7 @@ const Products = () => (
   <div className="product-container">
     <Row>
       <Col id="product-titlebox" xs={12} sm={12} md={12}>
-        <p className="products">Products</p>
+        <p className="products"><Link to="productDetail">Products</Link></p>
       </Col>
       <Row>
         <Col id="product-imagebox" xs={12} sm={12} md={8}>
