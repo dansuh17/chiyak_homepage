@@ -1,5 +1,7 @@
 import React from 'react';
 import { Row, Col, Jumbotron } from 'react-bootstrap';
+import drchoi from '../img/drChoi.png';
+import './ChiyakIntro.css';
 
 const ChiyakIntro = () => (
   <div>
@@ -7,6 +9,7 @@ const ChiyakIntro = () => (
       <Col><h2>치약의 개념을 바로잡다!</h2></Col>
       <Col><h3>Choi’s가 개발하고, Choice한 좋은치약</h3></Col>
     </Row>
+    <img className="drchoi" src={drchoi} alt="#" />
     <Row>
       <Col md={6} mdOffset={3}>
         <Jumbotron>닥터초이스 좋은치약은 ‘좋은 성분을 첨가하기 전에 나쁜 성분을 넣 지  않아야  한다’는  원칙으로  만들었습니다.
