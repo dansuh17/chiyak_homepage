@@ -13,7 +13,7 @@ import ProductDetail from './components/ProductDetail';
 import './index.css';
 
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
     <Route path="/" component={App}>
       {/* default route */}
       <IndexRoute component={Main} />

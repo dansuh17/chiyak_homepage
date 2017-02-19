@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Jumbotron } from 'react-bootstrap';
 import './ProductBox.css';
 
 /**
@@ -18,7 +18,8 @@ const ProductBox = props => (
       </Col>
     </Row>
 
-    <Row>{props.subtitle}</Row>
+    <Row><h4>{props.subtitle}</h4></Row>
+    <Row className="quoteRow"><h4>{props.quote}</h4></Row>
 
     {/* 제품 대표 사진 */}
     <Row>
@@ -30,7 +31,7 @@ const ProductBox = props => (
     <Row><h2>{props.headerTwo}</h2></Row>
 
     {/* 제품 상세설명 - 항목 개수는 4개로 제한 */}
-    <Row>
+    <Row className="detailsRow">
       {
         props.details.map((detail, index) => (
           <Col sm={12} xs={12} md={3} key={index}>{detail}</Col>
@@ -40,11 +41,9 @@ const ProductBox = props => (
 
     {/* 성분 표시 */}
     <Row>
-      <Col md={12}>
-        <p>성분</p><p>From Nature</p>
-      </Col>
-      <Col md={12}>
-        <p>{props.ingredients}</p>
+      <Col className="ingredientBox">
+        <p><bold>성분</bold><span className="fromnature"> From Nature</span></p>
+        <Jumbotron>{props.ingredients}</Jumbotron>
       </Col>
     </Row>
   </div>
@@ -57,6 +56,7 @@ ProductBox.propTypes = {
   headerTwo: PropTypes.string,
   ingredients: PropTypes.string,
   details: PropTypes.arrayOf(PropTypes.string),
+  quote: PropTypes.string,
 };
 
 export default ProductBox;
