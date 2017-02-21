@@ -10,7 +10,6 @@
 
 .linkbox {
   background-color: lightcyan;
-  border: 1px solid;
   margin-bottom: 3%;
 }
 
@@ -21,7 +20,6 @@
 
 #product-imagebox {
   padding: 1% 3% 3% 3%;
-  border-right: 1px solid black;
 }
 
 #linkbox-container {
