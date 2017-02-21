@@ -5,8 +5,7 @@
 
 .element {
   background-color: white;
-  border-top: 1px solid #000;
-  padding-left: 10px;
+  padding-left: 0;
 }
 
 .active {

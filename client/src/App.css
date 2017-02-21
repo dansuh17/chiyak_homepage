@@ -5,9 +5,15 @@
 }
 
 @font-face {
-  font-family: 'nanum_yet_gothic';
-  src: url('../public/nanum_yet_gothic.ttf') format('truetype');
-  src: url('../public/nanum_yet_gothic.otf') format('truetype');
+  font-family: 'modern_gothic';
+  src: url('../public/modern_gothic_font.ttf') format('truetype');
+  src: url('../public/modern_gothic.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumPen';
+  src: url('../public/NanumPen.otf') format('truetype');
+  src: url('../public/NanumScript.ttc') format('truetype');
 }
 
 .App {

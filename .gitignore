@@ -5,3 +5,4 @@ client/build
 yarn.lock
 .yarnclean
 .idea
+.DS_Store

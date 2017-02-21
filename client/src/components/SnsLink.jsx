@@ -1,13 +1,19 @@
 import React from 'react';
-import fbimage from '../img/facebook.png';
-import inimage from '../img/instagram.png';
+import { Row, Col } from 'react-bootstrap';
+import logo from '../img/chiyakLogo.png';
 import './SnsLink.css';
 
 const SnsLink = () => (
   <div>
-    <a href="http://www.facebook.com"><img className="snsicons" src={fbimage} alt="#" /></a>
-    <a href="http://www.instagram.com"><img className="snsicons" src={inimage} alt="#" /></a>
-    <p className="Address">서울특별시 강남구 테헤란로 201</p>
+    <Row>
+      <Col md={3} mdOffset={9}>
+        <img src={logo} className="logo" alt="#" /><br /><br />
+        <p className="Address">고객센터</p>
+        <p className="Address">Mon-Fri. 10AM-5PM </p>
+        <p className="Address">P. 02-363-1502</p>
+        <p className="Address">E. kitaechoi@doctorchois.com</p>
+      </Col>
+    </Row>
   </div>
 );
 
