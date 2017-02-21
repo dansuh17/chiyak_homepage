@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import stores from '../stores';
+import stores from '../stores';  // eslint-disable-line
 import './Purchase.css';
 
 class Purchase extends Component {

@@ -51,15 +51,15 @@ const offlineStores = [
   {
     name: '연세베스트덴치과',
     address: '서울특별시 동작구 보라매로5길 51 (신대방동 롯데관악타워 3층)',
-    lat: ,
-    lng: ,
+    lat: 37.0,
+    lng: 126.0,
     tel: '02-836-2223,4',
   },
   {
     name: '새연세부부치과',
     address: '',
-    lat: ,
-    lng: ,
+    lat: 37.0,
+    lng: 126.0,
     tel: '',
   },
 ];
