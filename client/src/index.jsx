@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import About from './components/About';
 import Main from './components/Main';
 import ProductDetail from './components/ProductDetail';
+import Purchase from './components/Purchase';  // eslint-disable-line
 import './index.css';
 
 ReactDOM.render(
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path="/contact" components={Contact} />
       <Route path="/about" component={About} />
       <Route path="/productDetail" component={ProductDetail} />
+      <Route path="/purchase" component={Purchase} />
     </Route>
   </Router>,
   document.getElementById('root'),
