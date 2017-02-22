@@ -39,7 +39,7 @@ class Purchase extends Component {
         '<div>',
         `<h4>${stores[i].name}</h4>`,
         `<p>${stores[i].address}</p>`,
-        `<p>${stores[i].tel}</p>`,
+        `<p>tel: ${stores[i].tel}</p>`,
         '</div>',
       ].join('');
 
