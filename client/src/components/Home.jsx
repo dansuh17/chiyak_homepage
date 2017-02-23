@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { Link } from 'react-router';
 import './Home.css';
 
 const Home = () => (
@@ -9,8 +8,7 @@ const Home = () => (
       <h1 className="col5 TitleCaption">From Mouth To Life:FMTL</h1>
     </div>
     <h1 className="home-subtitle1">
-      {/* Go to another page */}
-      <Link to="/somewhere">치약의 개념을 바로잡다</Link>
+      치약의 개념을 바로잡다
     </h1>
     <Row className="row-padding">
       <Col className="home-subsection" xs={12} sm={12} md={4}>

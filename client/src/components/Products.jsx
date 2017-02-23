@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import productImage from '../img/products.jpeg';
 import './Products.css';
 
@@ -26,6 +26,9 @@ const Products = () => (
           <Col xs={12} sm={12} md={12}>
             요리사 소믈리에 바리스타 등 미각을 보호해 주는 치약
           </Col>
+          <Link to="purchase">
+            <Button bsSize="large" block>사러가기</Button>
+          </Link>
         </Col>
       </Row>
     </Row>
@@ -45,6 +48,11 @@ const Products = () => (
         </Col>
         <Col xs={12} sm={12} md={12}>
           어린이, 임산부, 노인 등 연약을 입안을 보호해 주는 치약
+        </Col>
+        <Col xs={12} sm={12} md={12}>
+          <Link to="purchase">
+            <Button bsSize="large" block>사러가기</Button>
+          </Link>
         </Col>
       </Col>
     </Row>
