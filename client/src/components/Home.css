@@ -60,13 +60,41 @@ img {
 }
 
 .sls{
-  background-image: url('../img/sls.jpeg');
+  /* background-image: url('../img/sls.jpeg'); */
   background-size: 100% auto;
   width : 100%;
 }
 
 .jum {
   padding : 50px;
-  color : white;
+  color : black;
   font-size : 1.5em;
+}
+
+.question-mark {
+  height: 1.5em;
+  width: auto;
+}
+
+.popover-content {
+  max-width: 70vw;
+  text-align: center;
+}
+
+.popover {
+  max-width: 470px;
+}
+
+#popover-trigger-hover-focus {
+  width: 70vw;
+}
+
+.good-stuff {
+  margin-top: 3%;
+  padding-left: 4.167%
+}
+
+.good-stuff-column {
+  float: none;
+  height: 100%;
 }
