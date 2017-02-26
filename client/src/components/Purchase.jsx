@@ -31,6 +31,7 @@ class Purchase extends Component {
     };
 
     this.onClickHandler = this.onClickHandler.bind(this);
+    this.onMapSetup = this.onMapSetup.bind(this);
   }
 
   componentWillMount() {
@@ -54,7 +55,7 @@ class Purchase extends Component {
       // 연대 치대 예제
       const marker = new naver.maps.Marker({
         position: new naver.maps.LatLng(stores[i].lat, stores[i].lng),
-        map: map,
+        map,
       });
 
       const contentString = [
@@ -79,11 +80,18 @@ class Purchase extends Component {
     }
     /* eslint-enable */
 
-    this.setState = {
-      map,
-    };
+    this.onMapSetup(map);
+  }
 
-    console.log(this.state); // eslint-disable-line
+  onMapSetup(map) {
+    this.setState({
+      map,
+    });
+
+    // disable dragging initially
+    map.setOptions({
+      draggable: false,
+    });
   }
 
   onClickHandler() {
@@ -110,7 +118,7 @@ class Purchase extends Component {
         disableTwoFingerTapZoom: false,
       });
     }
-    /* eslint-enabled */
+    /* eslint-enable */
   }
 
   render() {

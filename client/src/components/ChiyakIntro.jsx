@@ -4,7 +4,7 @@ import drchoi from '../img/drChoi.png';
 import './ChiyakIntro.css';
 
 const ChiyakIntro = () => (
-  <div>
+  <div className="chiyakintro-container">
     <Row>
       <Col><h1>치약의 개념을 바로잡다!</h1></Col>
       <Col><h3>Choi’s가 개발하고, Choice한 좋은치약</h3></Col>

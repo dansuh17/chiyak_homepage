@@ -27,7 +27,38 @@
 }
 
 .chiyakSection {
-  background-color: antiquewhite;
+  color: tomato;
   padding: 0 10%;
   margin-top: 3%;
 }
+
+.go-to-purchase {
+  display: block;
+  width: 100%;
+  border: 1.5px black solid;
+  border-radius: 7px;
+  padding: 5% 20%;
+  font-size: 1.2em;
+  transition: background-color 0.5s;
+}
+
+.go-to-purchase:hover {
+  color: black;
+  background-color: lightcyan;
+  transition: background-color 0.5s;
+}
+
+.product-quote {
+  font-size: 1.5em;
+  color: gray;
+}
+
+.purchase-icon {
+  height: 1.2em;
+  width: auto;
+}
+
+.product-det1 {
+  font-size: 1.2em;
+}
+
