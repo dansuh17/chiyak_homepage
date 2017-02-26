@@ -74,14 +74,15 @@ const Home = () => (
         </div>
       </Col>
     </Row>
-    <Row>
+
+    <Row id="bad-stuff-row">
       <h3>나쁜 성분 빼기</h3>
-      <p>SLS(합성계면활성제, 인공L-멘톨, 파라벤, 트리클로산, 인공색소,</p>
-      <p>벤조산, 인공방부제, 광물성오일, CMTI-MIT(가습기살균제 성분)</p>
+      <h4>SLS(합성계면활성제, 인공L-멘톨, 파라벤, 트리클로산, 인공색소,</h4>
+      <h4>벤조산, 인공방부제, 광물성오일, CMTI-MIT(가습기살균제 성분)</h4>
       <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popoverHoverFocus}>
-        <p>합성계면활성제란
+        <h4>합성계면활성제란
           <img className="question-mark" src={questionMark} alt="#" />
-        </p>
+        </h4>
       </OverlayTrigger>
     </Row>
 
@@ -89,34 +90,42 @@ const Home = () => (
     <Row className="good-stuff">
       <OverlayTrigger placement="bottom" overlay={tooltip1}>
         <Col className="good-stuff-column" xs={12} sm={2} md={2}>
-          <img src={leaf} alt="#" />
+          <div className="good-stuff-image-box">
+            <img className="good-stuff-img" src={leaf} alt="#" />
+          </div>
           <h5>식물성계면활성제</h5>
         </Col>
       </OverlayTrigger>
-      <Col className="good-stuff-column" xs={12} sm={1} md={1}>
-        <img src={plus} alt="#" />
+      <Col className="good-stuff-column-plus" xs={12} sm={1} md={1}>
+        <img className="good-stuff-plus" src={plus} alt="#" />
       </Col>
       <OverlayTrigger placement="bottom" overlay={tooltip2}>
         <Col className="good-stuff-column" xs={12} sm={2} md={2}>
-          <img src={smile} alt="#" />
+          <div className="good-stuff-image-box">
+            <img className="good-stuff-img" src={smile} alt="#" />
+          </div>
           <h5>코엔자임 Q10</h5>
         </Col>
       </OverlayTrigger>
-      <Col className="good-stuff-column" xs={12} sm={1} md={1}>
-        <img src={plus} alt="#" />
+      <Col className="good-stuff-column-plus" xs={12} sm={1} md={1}>
+        <img className="good-stuff-plus" src={plus} alt="#" />
       </Col>
       <OverlayTrigger placement="bottom" overlay={tooltip3}>
         <Col className="good-stuff-column" xs={12} sm={2} md={2}>
-          <img src={teeth} alt="#" />
+          <div className="good-stuff-image-box">
+            <img className="good-stuff-img" src={teeth} alt="#" />
+          </div>
           <h5>하이드록시아파타이트</h5>
         </Col>
       </OverlayTrigger>
-      <Col className="good-stuff-column" xs={12} sm={1} md={1}>
-        <img src={plus} alt="#" />
+      <Col className="good-stuff-column-plus" xs={12} sm={1} md={1}>
+        <img className="good-stuff-plus" src={plus} alt="#" />
       </Col>
       <OverlayTrigger placement="bottom" overlay={tooltip4}>
         <Col className="good-stuff-column" xs={12} sm={2} md={2}>
-          <img src={flower} alt="#" />
+          <div className="good-stuff-image-box">
+            <img id="flower" className="good-stuff-img" src={flower} alt="#" />
+          </div>
           <h5>유기농 에코서트 인증</h5>
         </Col>
       </OverlayTrigger>
