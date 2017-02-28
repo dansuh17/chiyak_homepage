@@ -87,11 +87,6 @@ class Purchase extends Component {
     this.setState({
       map,
     });
-
-    // disable dragging initially
-    map.setOptions({
-      draggable: false,
-    });
   }
 
   onClickHandler() {

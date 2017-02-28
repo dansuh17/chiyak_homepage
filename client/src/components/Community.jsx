@@ -6,9 +6,6 @@ import './Community.css';
 const Community = () => (
   <div className="community-container">
     <Row>
-      <Col id="community-titlebox" xs={12} sm={12} md={12}>
-        <p className="community">Community</p>
-      </Col>
       <Row>
         <Col id="community-imagebox" xs={12} sm={12} md={8}>
           <img src={productImage} role="presentation" />
