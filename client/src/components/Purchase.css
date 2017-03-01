@@ -19,3 +19,15 @@
   margin: 2% 0 2% 0;
 }
 
+.store-label {
+  padding-top: 3px;
+  padding: 0 12px;
+  text-align: left;
+}
+
+.store-label p {
+  float: left;
+  color: gray;
+  padding: 0;
+  margin: 0;
+}

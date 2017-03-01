@@ -91,7 +91,7 @@ img {
 }
 
 .good-stuff {
-  padding-left: 4.167%
+  padding-left: 4.167%;
 }
 
 .good-stuff-column {
@@ -140,5 +140,10 @@ img {
 }
 
 #bad-stuff-row {
+  background-color: lavender;
   margin-bottom: 5%;
+}
+
+#SLS-info {
+  color: gray;
 }

@@ -7,6 +7,7 @@ import './Purchase.css';
 // naver map api client id - 따로 신청해야함
 const CLIENT_ID = 'pOhVvAhVKvbXx_wi9MzL';
 
+// 온라인 판매점 리스트
 const onlineStores = [
   {
     name: '닥터제이스',
@@ -30,7 +31,6 @@ class Purchase extends Component {
       map: null,
     };
 
-    this.onClickHandler = this.onClickHandler.bind(this);
     this.onMapSetup = this.onMapSetup.bind(this);
   }
 
@@ -47,29 +47,40 @@ class Purchase extends Component {
     // 잠시 eslint 해제 - 'naver' 오브젝트가 스크립트로 로드됨
     /* eslint-disable */
     const map = new naver.maps.Map('naverMap', {
-      center: new naver.maps.LatLng(37.562954, 126.941679),
-      zoom: 10,
+      center: new naver.maps.LatLng(36.562954, 127.941679),
+      zoom: 3,
+      minZoom: 3,
+      maxZoom: 13,
+      zoomControl: true,
     });
 
     for (let i = 0; i < stores.length; i++) {
-      // 연대 치대 예제
+      // 지도에 마커 뿌리기
       const marker = new naver.maps.Marker({
         position: new naver.maps.LatLng(stores[i].lat, stores[i].lng),
         map,
       });
 
+      // 정보창에 넣어줄 정보
       const contentString = [
-        '<div>',
+        '<div class="store-label">',
         `<h4>${stores[i].name}</h4>`,
-        `<p>${stores[i].address}</p>`,
-        `<p>tel: ${stores[i].tel}</p>`,
+        `<p>${stores[i].address}</p></br>`,
+        `<p>전화: ${stores[i].tel}</p>`,
         '</div>',
       ].join('');
 
+      // 정보창 스타일 수정
       const infoWindow = new naver.maps.InfoWindow({
         content: contentString,
+        backgroundColor: '#f0ffff',
+        anchorColor: '#f0ffff',
+        anchorSkew: true,
+        borderColor: '#808080',
+        borderWidth: 1,
       });
 
+      // 클릭시 정보창 띄우기
       naver.maps.Event.addListener(marker, "click", event => {
         if (infoWindow.getMap()) {
           infoWindow.close();
@@ -84,36 +95,10 @@ class Purchase extends Component {
   }
 
   onMapSetup(map) {
+    // componentWillMount의 무한루프 방지
     this.setState({
       map,
     });
-  }
-
-  onClickHandler() {
-    /* eslint-disabled */
-    console.log(this.state); // eslint-disable-line
-    if (this.state.map.getOptions('draggable')) {
-      this.state.map.setOptions({
-        draggable: false,
-        pinchZoom: false,
-        scrollWheel: false,
-        keyboardShortcuts: false,
-        disableDoubleTapZoom: true,
-        disableDoubleClickZoom: true,
-        disableTwoFingerTapZoom: true,
-      });
-    } else {
-      this.state.map.setOptions({ // 지도 인터랙션 켜기
-        draggable: true,
-        pinchZoom: true,
-        scrollWheel: true,
-        keyboardShortcuts: true,
-        disableDoubleTapZoom: false,
-        disableDoubleClickZoom: false,
-        disableTwoFingerTapZoom: false,
-      });
-    }
-    /* eslint-enable */
   }
 
   render() {
@@ -127,7 +112,6 @@ class Purchase extends Component {
         </div>
         <div className="purchase-box">
           <h2 className="purchase-title">오프라인 판매처</h2>
-          <button onClick={this.onClickHandler}>지도 인터랙션 끄기 / 키기</button>
           <p className="info-text">* 지도를 움직여 집 근처 판매점을 찾아보세요!</p>
           <div id="naverMap" className="map" />
         </div>
