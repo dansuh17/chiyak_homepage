@@ -23,26 +23,30 @@ const popoverHoverFocus = (
 );
 
 const tooltip1 = (
-  <Tooltip id="tooltip1">
-    <p>칫솔질 후에도 과일 맛이 그대로 누구나 안심하고 쓸 수 있는 자연거품</p>
+  <Tooltip className="goodstuff-tooltip" id="tooltip1">
+    <p>칫솔질 후에도 과일 맛이 그대로</p>
+    <p>누구나 안심하고 쓸 수 있는 자연거품</p>
   </Tooltip>
 );
 
 const tooltip2 = (
-  <Tooltip id="tooltip2">
-    <p>칫솔질 후에도 과일 맛이 그대로 누구나 안심하고 쓸 수 있는 자연거품</p>
+  <Tooltip className="goodstuff-tooltip" id="tooltip2">
+    <p>Hydro particle 항산화 비타민</p>
+    <p>입안에서부터 시작되는 건강 활력소</p>
   </Tooltip>
 );
 
 const tooltip3 = (
-  <Tooltip id="tooltip3">
-    <p>칫솔질 후에도 과일 맛이 그대로 누구나 안심하고 쓸 수 있는 자연거품</p>
+  <Tooltip className="goodstuff-tooltip" id="tooltip3">
+    <p>치아구조와 유사한 물질</p>
+    <p>치아를 튼튼하게 하고 시린이 예방</p>
   </Tooltip>
 );
 
 const tooltip4 = (
-  <Tooltip id="tooltip4">
-    <p>칫솔질 후에도 과일 맛이 그대로 누구나 안심하고 쓸 수 있는 자연거품</p>
+  <Tooltip className="goodstuff-tooltip" id="tooltip4">
+    <p>카모마일, 세이지, 유칼립투스, 알로에</p>
+    <p>입냄새를 제거, 연약한 입 안을 보호</p>
   </Tooltip>
 );
 

@@ -129,6 +129,10 @@ img {
   width: 30px;
 }
 
+.goodstuff-tooltip p {
+  margin: 0;
+}
+
 #flower {
   width: 80px;
 }

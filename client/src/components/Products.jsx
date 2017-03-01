@@ -9,11 +9,11 @@ const Products = () => (
   <div className="product-container">
     <Row>
       <Row>
-        <Col id="product-imagebox" xs={12} sm={12} md={8}>
+        <Col className="product-imagebox" xs={12} sm={8} md={8}>
           <img src={productImage} role="presentation" />
         </Col>
-        <Col id="linkbox-container" xs={12} sm={12} md={4}>
-          <Col xs={6} sm={6} md={12}>
+        <Col id="linkbox-container" xs={12} sm={4} md={4}>
+          <Col xs={12} sm={12} md={12}>
             <Col className="chiyakSection" md={12} sm={12} xs={12}>
               <h2>좋은치약 smile</h2>
             </Col>
@@ -26,7 +26,7 @@ const Products = () => (
             {'요리사 소믈리에 바리스타 등'}<br className="breakline" />
             {'미각을 보호해 주는 치약'}
           </Col>
-          <Col xs={12} sm={12} md={12}>
+          <Col xs={6} xsOffset={3} smOffset={0} sm={12} md={12}>
             <Link to="purchase" className="go-to-purchase">
               사러가기
               <img className="purchase-icon" src={shopIcon} alt="#" />
@@ -37,11 +37,8 @@ const Products = () => (
     </Row>
 
     <Row>
-      <Col id="product-imagebox" xs={12} sm={12} md={8}>
-        <img src={productImage} role="presentation" />
-      </Col>
-      <Col id="linkbox-container" xs={12} sm={12} md={4}>
-        <Col xs={6} sm={6} md={12}>
+      <Col id="linkbox-container" xs={12} sm={4} md={4}>
+        <Col xs={12} sm={12} md={12}>
           <Col className="chiyakSection" md={12} sm={12} xs={12}>
             <h2>좋은치약 care</h2>
           </Col>
@@ -54,12 +51,15 @@ const Products = () => (
           {'어린이, 임산부, 노인 등'}<br className="breakline" />
           {'연약한 입안을 보호해 주는 치약'}
         </Col>
-        <Col xs={12} sm={12} md={12}>
+        <Col xs={6} xsOffset={3} smOffset={0} sm={12} md={12}>
           <Link to="go-to-purchase" className="go-to-purchase">
             사러가기
             <img className="purchase-icon" src={shopIcon} alt="#" />
           </Link>
         </Col>
+      </Col>
+      <Col className="product-imagebox" xs={12} sm={8} md={8}>
+        <img src={productImage} role="presentation" />
       </Col>
     </Row>
   </div>
