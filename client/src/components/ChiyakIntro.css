@@ -1,7 +1,7 @@
 .drchoi{
   max-width: 220px;
   height: auto;
-  float : right;
+  float : left;
   margin-right: 5%;
 }
 
@@ -15,8 +15,9 @@
 
 .jum1 {
   font-family: 'NanumPen';
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 10px 10px 10px 10px;
   padding : 5% 5% 5% 5%;
+  width : 100%;
 }
 
 .chiyakintro-container {
@@ -25,6 +26,28 @@
 }
 
 #vitaminVideo {
-  max-width: 100%;
+  max-width: 70%;
+  margin-left: 180px;
 }
 
+.capture {
+  margin-top : 100px;
+  height : 400px;
+  width : auto;
+}
+
+.drchoi-h {
+  background-image: url('../img/drChoi.png');
+  background-repeat: no-repeat;
+  height : 250px;
+  margin-left: 35%;
+  font-size : 4em;
+  text-align: right;
+  font-family: 'Nanum Brush Script';
+}
+
+.span {
+  position : relative;
+  top : 120px;
+  margin-left : 0%;
+}

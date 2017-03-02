@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Jumbotron } from 'react-bootstrap';
-import drchoi from '../img/drChoi.png';
 import './ChiyakIntro.css';
+import capture from '../img/capture.png';
 
 const vitaminVideoSrc = 'https://s3.ap-northeast-2.amazonaws.com/chiyak.homepage/vitamin_video.mp4';
 
@@ -16,7 +16,7 @@ class ChiyakIntro extends Component {
         </Row>
         <Row>
           <Col md={3} className="intro">
-            <img className="drchoi" src={drchoi} alt="#" />
+            <img className="capture" src={capture} alt="#" />
           </Col>
           <Col md={9} className="intro">
             {/* 비타민 출연 동영상 */}
@@ -36,8 +36,12 @@ class ChiyakIntro extends Component {
           </Col>
         </Row>
         <Row id="letter-container">
-          <Col>
-            <h3>Dr. Choi to You</h3>
+          <Col md={5} className="drchoi-h">
+            <p><span className="span">Dr. Choi to You</span></p>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={8} mdOffset={2}>
             <Jumbotron className="jum1">
               <p>닥터초이스 좋은치약은</p>
               <h3>‘좋은 성분을 첨가하기 전에 나쁜 성분을 넣지 않아야 한다’</h3>
