@@ -26,12 +26,12 @@ img {
   font-family: 'nanum_yet_gothic', 'modern_gothic', sans-serif;
   padding-top: 10%;
   padding-bottom: 30%;
+  padding-left: 30px;
   color: white;
 }
 
 @media (max-width: 575px) {
   .TitleCaption {
-    font-size: 1.2em;
   }
 }
 
@@ -56,7 +56,7 @@ img {
 }
 
 .subsection-body {
-  margin-top: 5%;
+  margin-top: 10px;
 }
 
 .sls{
@@ -105,9 +105,10 @@ img {
   padding-top: 50px !important;
 }
 
-@media (max-width:767px) {
+@media (max-width:765px) {
   .good-stuff-column-plus {
-    padding-top: 0 !important;
+    visibility: hidden;
+    display: none;
   }
 
   h5 {
@@ -139,13 +140,25 @@ img {
 
 .good-stuff-image-box {
   background-color: #ffecec;
+  transition: background-color 0.5s;
   padding: 15px 0;
   border-radius: 10px;
 }
 
+.good-stuff-image-box:hover {
+  background-color: white;
+  transition: background-color 0.5s;
+}
+
+#good-stuff-row {
+  padding-top: 10px;
+}
+
 #bad-stuff-row {
   background-color: lavender;
-  margin-bottom: 5%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding: 10px 10% 20px 10%;
 }
 
 #SLS-info {

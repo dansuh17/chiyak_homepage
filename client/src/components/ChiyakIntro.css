@@ -10,7 +10,7 @@
 }
 
 #letter-container {
-  margi-top: 5%;
+  margin-top: 30px;
 }
 
 .jum1 {
@@ -27,13 +27,10 @@
 
 #vitaminVideo {
   max-width: 70%;
-  margin-left: 180px;
 }
 
-.capture {
-  margin-top : 100px;
-  height : 400px;
-  width : auto;
+#video-title {
+  color: #9595ea;
 }
 
 .drchoi-h {
@@ -51,3 +48,54 @@
   top : 120px;
   margin-left : 0%;
 }
+
+@media screen and (max-width: 500px) {
+  .drchoi-h {
+    font-size: 2.5em;
+  }
+}
+
+.capture {
+  width: 70%;
+}
+
+@media screen and (max-width: 700px) {
+  #vitaminVideo {
+    max-width: 100%;
+  }
+
+  .capture {
+    width: 100%;
+  }
+}
+
+.broadcast-history {
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, visibility 0.5s linear;
+}
+
+.show-history {
+  visibility: visible;
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+}
+
+.show-history-button {
+  margin: auto;
+  background-color: white;
+  display: block;
+  width: 70%;
+  border: 1.5px black solid;
+  border-radius: 7px;
+  padding: 8px;
+  transition: background-color 0.5s;
+  font-size: 0.8em;
+}
+
+.show-history-button:hover {
+  background-color: #B39292;
+  transition: background-color 0.5s;
+}
+

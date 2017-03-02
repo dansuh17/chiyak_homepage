@@ -5,8 +5,8 @@ import './SnsLink.css';
 
 const SnsLink = () => (
   <div>
-    <Row>
-      <Col md={3} mdOffset={9}>
+    <Row className="snslink-row">
+      <Col xs={12} sm={12} md={3} mdOffset={9}>
         <img src={logo} className="logo" alt="#" /><br /><br />
         <p className="Address">고객센터</p>
         <p className="Address">Mon-Fri. 10AM-5PM </p>

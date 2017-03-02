@@ -5,8 +5,32 @@ import capture from '../img/capture.png';
 
 const vitaminVideoSrc = 'https://s3.ap-northeast-2.amazonaws.com/chiyak.homepage/vitamin_video.mp4';
 
-/* eslint-disable */
 class ChiyakIntro extends Component {
+  constructor(prop) {
+    super(prop);
+
+    this.state = ({
+      showHistory: false,
+      broadCastClass: 'broadcast-history',
+    });
+
+    this.showHistory = this.showHistory.bind(this);
+  }
+
+  showHistory() {
+    if (!this.state.showHistory) {
+      this.setState({
+        showHistory: true,
+        broadCastClass: 'broadcast-history show-history',
+      });
+    } else {
+      this.setState({
+        showHistory: false,
+        broadCastClass: 'broadcast-history',
+      });
+    }
+  }
+
   render() {
     return (
       <div className="chiyakintro-container">
@@ -15,24 +39,25 @@ class ChiyakIntro extends Component {
           <Col><h3>Choi’s가 개발하고, Choice한 좋은치약</h3></Col>
         </Row>
         <Row>
-          <Col md={3} className="intro">
-            <img className="capture" src={capture} alt="#" />
-          </Col>
-          <Col md={9} className="intro">
+          <Col xs={12} sm={12} md={12} className="intro">
             {/* 비타민 출연 동영상 */}
-            <h3>이 갈리는 칫솔질?</h3>
-            <video 
-              id="vitaminVideo" 
-              src={vitaminVideoSrc} 
+            <h3 id="video-title">이 갈리는 칫솔질?</h3>
+            <video // eslint-disable-line jsx-a11y/no-static-element-interactions
+              id="vitaminVideo"
+              src={vitaminVideoSrc}
               onClick={(e) => {
                 if (e.target.paused) {
                   e.target.play();
                 } else {
                   e.target.pause();
                 }
-              }} 
+              }}
             />
-            <p>연세대학교 최종훈 교수 KBS '비타민' 출연영상</p>
+            <p>{'Dr.Choi\'s KBS \'비타민\' 출연영상'}</p>
+            <button className="show-history-button" onClick={this.showHistory}>더 보기</button>
+          </Col>
+          <Col xs={12} sm={12} md={12} className={`intro ${this.state.broadCastClass}`}>
+            <img className="capture" src={capture} alt="#" />
           </Col>
         </Row>
         <Row id="letter-container">
@@ -41,7 +66,7 @@ class ChiyakIntro extends Component {
           </Col>
         </Row>
         <Row>
-          <Col md={8} mdOffset={2}>
+          <Col xs={12} sm={12} md={8} mdOffset={2}>
             <Jumbotron className="jum1">
               <p>닥터초이스 좋은치약은</p>
               <h3>‘좋은 성분을 첨가하기 전에 나쁜 성분을 넣지 않아야 한다’</h3>

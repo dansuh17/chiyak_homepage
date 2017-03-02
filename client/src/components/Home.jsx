@@ -81,8 +81,10 @@ const Home = () => (
 
     <Row id="bad-stuff-row">
       <h3>나쁜 성분 빼기</h3>
-      <h4>SLS(합성계면활성제, 인공L-멘톨, 파라벤, 트리클로산, 인공색소,</h4>
-      <h4>벤조산, 인공방부제, 광물성오일, CMTI-MIT(가습기살균제 성분)</h4>
+      <h4>SLS(합성계면활성제, 인공L-멘톨, 파라벤, 트리클로산, 인공색소,
+        벤조산, 인공방부제, 광물성오일, CMTI-MIT(가습기살균제 성분)
+      </h4>
+      <br />
       <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popoverHoverFocus}>
         <h4 id="SLS-info">합성계면활성제란
           <img className="question-mark" src={questionMark} alt="#" />
