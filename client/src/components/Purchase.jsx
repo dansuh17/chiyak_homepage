@@ -91,6 +91,9 @@ class Purchase extends Component {
       });
     }
     /* eslint-enable */
+    map.setOptions({
+      scrollWheel: false,
+    });
 
     this.onMapSetup(map);
   }

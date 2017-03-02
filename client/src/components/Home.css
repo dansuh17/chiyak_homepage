@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-  color: tomato;
+  color: #b59580;
   text-decoration: none;
 }
 
@@ -30,11 +30,6 @@ img {
   color: white;
 }
 
-@media (max-width: 575px) {
-  .TitleCaption {
-  }
-}
-
 .home-subtitle1 {
   font-family: 'Nanum Barun Gothic', Helvetica Neue, sans-serif;
   font-weight: 700;
@@ -42,6 +37,12 @@ img {
   letter-spacing: 0.22em;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 575px) {
+  .home-subtitle1 {
+    letter-spacing: 0em;
+  }
 }
 
 .row-padding {
