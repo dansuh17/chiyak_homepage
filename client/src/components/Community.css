@@ -21,12 +21,17 @@
 }
 
 .community-linkbox {
+  margin-top : 20%;
   margin-bottom: 3%;
   font-size: 1.2em;
 }
 
 .community-linkbox h2 {
   color: #4f391c;
+}
+
+.community-linkbox:hover{
+  color : #B39292;
 }
 
 #community-imagebox {
