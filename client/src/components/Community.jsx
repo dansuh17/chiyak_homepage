@@ -29,13 +29,13 @@ const Community = () => (
           <a href="http://www.medium.com">
             <Col className="community-linkbox" xs={6} sm={12} md={12}>
               <h2>News</h2>
-              <p>닥터초이스의 소식을 전해드립니다</p>
+              <h4>닥터초이스의 소식을 전해드립니다</h4>
             </Col>
           </a>
           <a href="http://www.brunch.co.kr">
             <Col className="community-linkbox" xs={6} sm={12} md={12}>
               <h2>Health</h2>
-              <p>입안에서 시작되는 건강라이프</p>
+              <h4>입안에서 시작되는 건강라이프</h4>
             </Col>
           </a>
         </Col>
