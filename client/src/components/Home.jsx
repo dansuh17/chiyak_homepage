@@ -55,9 +55,9 @@ const Home = () => (
     <div className="col12 MainDiv">
       <h1 className="col5 TitleCaption">From Mouth To Life</h1>
     </div>
-    <h1 className="home-subtitle1">
+    <p className="home-subtitle1">
       <bold>치약의 개념을 바로잡다</bold>
-    </h1>
+    </p>
     <Row className="row-padding">
       <Col className="home-subsection" xs={12} sm={12} md={4}>
         <h3>신선한 치약</h3>
