@@ -36,7 +36,10 @@ img {
 }
 
 .home-subtitle1 {
-  margin-top: 4%;
+  font-family: 'Nanum Barun Gothic', Helvetica Neue, sans-serif;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .row-padding {

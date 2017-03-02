@@ -56,7 +56,7 @@ const Home = () => (
       <h1 className="col5 TitleCaption">From Mouth To Life</h1>
     </div>
     <h1 className="home-subtitle1">
-      치약의 개념을 바로잡다
+      <bold>치약의 개념을 바로잡다</bold>
     </h1>
     <Row className="row-padding">
       <Col className="home-subsection" xs={12} sm={12} md={4}>
