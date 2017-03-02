@@ -43,7 +43,7 @@ const ProductBox = props => (
     <Row>
       <Col className="ingredientBox">
         <p><bold>성분</bold><span className="fromnature"> From Nature</span></p>
-        <Jumbotron>{props.ingredients}</Jumbotron>
+        <Jumbotron className="ingred-jumbo">{props.ingredients}</Jumbotron>
       </Col>
     </Row>
   </div>

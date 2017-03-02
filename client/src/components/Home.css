@@ -39,7 +39,7 @@ img {
   font-family: 'Nanum Barun Gothic', Helvetica Neue, sans-serif;
   font-weight: 700;
   font-size : 3em;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.22em;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -110,6 +110,10 @@ img {
   padding-top: 50px !important;
 }
 
+h5 {
+  padding-bottom: 0;
+}
+
 @media (max-width:765px) {
   .good-stuff-column-plus {
     visibility: hidden;
@@ -117,11 +121,15 @@ img {
   }
 
   h5 {
-    font-size: 1.5em
+    font-size: 1.2em;
   }
 
   .good-stuff-image-box {
     margin: 0 20%;
+  }
+
+  h4 {
+    font-size: 1.2em;
   }
 }
 

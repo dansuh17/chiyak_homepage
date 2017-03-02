@@ -1,6 +1,17 @@
+#community-share-container p {
+  font-size: 1.2em;
+  padding: 0 5%;
+}
+
+#share-image-container {
+  margin: auto;
+  padding: 30px;
+  max-width: 70%;
+}
+
 .community-container {
   background-color: lavender;
-  padding: 50px 3% 10px 3%;
+  padding: 30px 3% 10px 3%;
 }
 
 .community {
@@ -15,7 +26,7 @@
 }
 
 .community-linkbox h2 {
-  color: tomato;
+  color: #4f391c;
 }
 
 #community-imagebox {

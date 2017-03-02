@@ -35,9 +35,17 @@
 }
 
 .chiyakSection {
-  color: tomato;
+  color: #4f391c;
   padding: 0 10%;
   margin-top: 3%;
+}
+
+#chiyak-smile {
+  color: #755ee3;
+}
+
+#chiyak-care {
+  color: #e36bb3;
 }
 
 @media screen and (max-width: 860px) {
@@ -75,7 +83,7 @@
 
 @media screen and (max-width: 980px) and (min-width: 768px) {
   .product-quote {
-    font-size: 1.0em;
+    font-size: 1.2em;
   }
 } 
 

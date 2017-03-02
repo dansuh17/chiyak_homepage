@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'react-bootstrap';
 import PurchaseLinks from './PurchaseLinks';
+import ProductDetail from './ProductDetail';
 import stores from '../stores';  // eslint-disable-line
 import './Purchase.css';
 
@@ -115,6 +116,7 @@ class Purchase extends Component {
           <p className="info-text">* 지도를 움직여 집 근처 판매점을 찾아보세요!</p>
           <div id="naverMap" className="map" />
         </div>
+        <ProductDetail />
       </div>
     );
   }

@@ -15,7 +15,7 @@ const Products = () => (
         <Col id="linkbox-container" xs={12} sm={4} md={4}>
           <Col xs={12} sm={12} md={12}>
             <Col className="chiyakSection" md={12} sm={12} xs={12}>
-              <h2>좋은치약 smile</h2>
+              <h2>좋은치약 <span id="chiyak-smile">smile</span></h2>
             </Col>
             <Col className="product-quote" xs={12} sm={12} md={12}>
               {'"칫솔질 후에도 과일 맛을'}<br className="breakline" />
@@ -35,12 +35,13 @@ const Products = () => (
         </Col>
       </Row>
     </Row>
+    <br />
 
     <Row>
       <Col id="linkbox-container" xs={12} sm={4} md={4}>
         <Col xs={12} sm={12} md={12}>
           <Col className="chiyakSection" md={12} sm={12} xs={12}>
-            <h2>좋은치약 care</h2>
+            <h2>좋은치약 <span id="chiyak-care">care</span></h2>
           </Col>
           <Col className="product-quote" xs={12} sm={12} md={12}>
             {'"입안이 아파서 칫솔질을'}<br className="breakline" />
@@ -52,7 +53,7 @@ const Products = () => (
           {'연약한 입안을 보호해 주는 치약'}
         </Col>
         <Col xs={6} xsOffset={3} smOffset={0} sm={12} md={12}>
-          <Link to="go-to-purchase" className="go-to-purchase">
+          <Link to="purchase" className="go-to-purchase">
             사러가기
             <img className="purchase-icon" src={shopIcon} alt="#" />
           </Link>

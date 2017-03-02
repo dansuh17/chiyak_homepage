@@ -1,11 +1,26 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import productImage from '../img/products.jpeg';
+import shareImage from '../img/share.png';
 import './Community.css';
 
 const Community = () => (
   <div className="community-container">
     <Row>
+      <Row id="community-share-container">
+        <Col xs={12} sm={12} md={12}>
+          <h1>좋은치약에는 나눔이 있습니다</h1>
+          <br />
+          <p>닥터초이스코리아는 좋은치약 수익금의 일부를
+            스마일재단과 초록우산 어린이재단에 후원하며,
+            나눔을 실천합니다
+          </p>
+          <div id="share-image-container">
+            <img src={shareImage} alt="#" />
+          </div>
+        </Col>
+      </Row>
+
       <Row>
         <Col id="community-imagebox" xs={12} sm={8} md={8}>
           <img src={productImage} role="presentation" />

@@ -39,9 +39,13 @@ class ChiyakIntro extends Component {
           <Col><h3>Choi’s가 개발하고, Choice한 좋은치약</h3></Col>
         </Row>
         <Row>
-          <Col xs={12} sm={12} md={12} className="intro">
+          <Col xs={12} sm={6} md={6} className={`intro ${this.state.broadCastClass}`}>
+            <br />
+            <img className="capture" src={capture} alt="#" />
+          </Col>
+          <Col xs={12} sm={6} md={6} className="intro">
             {/* 비타민 출연 동영상 */}
-            <h3 id="video-title">이 갈리는 칫솔질?</h3>
+            <h4 id="video-title">이 갈리는 칫솔질?</h4>
             <video // eslint-disable-line jsx-a11y/no-static-element-interactions
               id="vitaminVideo"
               src={vitaminVideoSrc}
@@ -54,12 +58,9 @@ class ChiyakIntro extends Component {
               }}
             />
             <p>{'Dr.Choi\'s KBS \'비타민\' 출연영상'}</p>
-            <button className="show-history-button" onClick={this.showHistory}>더 보기</button>
-          </Col>
-          <Col xs={12} sm={12} md={12} className={`intro ${this.state.broadCastClass}`}>
-            <img className="capture" src={capture} alt="#" />
           </Col>
         </Row>
+
         <Row id="letter-container">
           <Col md={5} className="drchoi-h">
             <p><span className="span">Dr. Choi to You</span></p>
