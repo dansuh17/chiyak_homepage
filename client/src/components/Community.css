@@ -9,6 +9,10 @@
   max-width: 70%;
 }
 
+a {
+  color: white;
+}
+
 .community-container {
   background-color: #b59580;
   padding: 30px 3% 10px 3%;
@@ -26,12 +30,16 @@
   font-size: 1.2em;
 }
 
+.community-linkbox:hover h4 {
+  color:white;
+}
+
 .community-linkbox h2 {
   color: #4f391c;
 }
 
 .community-linkbox h4:hover{
-  color : #4f391c;
+  color : white;
 }
 
 #community-imagebox {
