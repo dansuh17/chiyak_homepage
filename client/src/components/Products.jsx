@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Row, Col } from 'react-bootstrap';
-import productImage from '../img/products.jpeg';
+import productImage from '../img/products.jpg';
 import shopIcon from '../img/shop.png';
 import './Products.css';
 

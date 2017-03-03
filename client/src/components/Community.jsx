@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import productImage from '../img/products.jpeg';
+import communityImage from '../img/news.jpg';
 import shareImage from '../img/share.png';
 import './Community.css';
 
@@ -23,7 +23,7 @@ const Community = () => (
 
       <Row>
         <Col id="community-imagebox" xs={12} sm={8} md={8}>
-          <img src={productImage} role="presentation" />
+          <img src={communityImage} role="presentation" />
         </Col>
         <Col id="linkbox-container" xs={12} sm={4} md={4}>
           <a href="http://www.medium.com">
