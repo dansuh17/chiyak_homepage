@@ -30,8 +30,8 @@
   color: #4f391c;
 }
 
-.community-linkbox:hover{
-  color : #B39292;
+.community-linkbox h4:hover{
+  color : #4f391c;
 }
 
 #community-imagebox {
