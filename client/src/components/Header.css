@@ -1,5 +1,10 @@
 .logoimg {
-  width: 3em !important;
+  height: 50px;
+  width: auto;
+}
+
+#logobox {
+  padding: 0;
 }
 
 .header {
@@ -14,3 +19,4 @@
 .container {
   height : 50px;
 }
+

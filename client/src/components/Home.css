@@ -36,7 +36,6 @@ img {
   font-size : 3em;
   letter-spacing: 0.22em;
   margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 575px) {
@@ -46,7 +45,8 @@ img {
 }
 
 .row-padding {
-  padding-bottom: 3%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .home-subsection {
@@ -148,6 +148,13 @@ h5 {
   margin: 0;
 }
 
+#plus-title {
+  color: #4f391c;
+  text-align: left;
+  font-weight: 700;
+  font-size: 3em;
+}
+
 #flower {
   width: 80px;
 }
@@ -165,16 +172,50 @@ h5 {
 }
 
 #good-stuff-row {
-  padding-top: 10px;
+  background-color: #f4e5df;
+  padding: 10px 10% 20px 10%;
 }
 
 #bad-stuff-row {
-  background-color: #AFDAE5;
+  background-color: #f4e5df;
+  text-align: right;
   padding-top: 10px;
   padding-bottom: 20px;
   padding: 10px 10% 20px 10%;
 }
 
+#bad-stuff-col {
+  padding-left: 0;
+}
+
+#minus-box {
+  text-align: center;
+  padding: 30px;
+}
+
+#plus-box {
+  text-align: center;
+  padding: 30px;
+}
+
+#minus-img {
+  height: 100px;
+  width: auto;
+}
+
+#plus-img {
+  height: 100px;
+  width: auto;
+}
+
+#minus-title {
+  color: #4f391c;
+  text-align: right;
+  font-size: 3em;
+  font-weight: 700;
+}
+
 #SLS-info {
   color: gray;
 }
+

@@ -25,7 +25,7 @@
 }
 
 #vitaminVideo {
-  max-width: 90%;
+  max-width: 70%;
 }
 
 #video-title {
@@ -51,6 +51,10 @@
 @media screen and (max-width: 500px) {
   .drchoi-h {
     font-size: 2.5em;
+  }
+
+  #vitaminVideo {
+    max-width: 100%;
   }
 }
 

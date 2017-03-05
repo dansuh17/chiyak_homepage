@@ -1,11 +1,14 @@
 import React from 'react';
-import { Col, Row, OverlayTrigger, Tooltip, Popover } from 'react-bootstrap';
+import { Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
 import questionMark from '../img/question_mark.png';
-import leaf from '../img/leaf.png';
-import smile from '../img/smile.png';
-import teeth from '../img/teeth.png';
-import flower from '../img/flower.png';
-import plus from '../img/plus.png';
+// import leaf from '../img/leaf.png';
+// import smile from '../img/smile.png';
+// import teeth from '../img/teeth.png';
+// import flower from '../img/flower.png';
+// import plus from '../img/plus.png';
+// import minus from '../img/minus-symbol.png';
+// import plusButton from '../img/plus-button.png';
+import goodPictogram from '../img/pictograms.png';
 import './Home.css';
 
 const popoverHoverFocus = (
@@ -22,6 +25,7 @@ const popoverHoverFocus = (
   </Popover>
 );
 
+/*
 const tooltip1 = (
   <Tooltip className="goodstuff-tooltip" id="tooltip1">
     <p>칫솔질 후에도 과일 맛이 그대로</p>
@@ -49,6 +53,7 @@ const tooltip4 = (
     <p>입냄새를 제거, 연약한 입 안을 보호</p>
   </Tooltip>
 );
+*/
 
 const Home = () => (
   <div>
@@ -58,6 +63,7 @@ const Home = () => (
     <p className="home-subtitle1">
       <bold>치약의 개념을 바로잡다</bold>
     </p>
+    <h3>좋은 성분을 넣기 이전에 나쁜 성분을 빼야 합니다</h3>
     <Row className="row-padding">
       <Col className="home-subsection" xs={12} sm={12} md={4}>
         <h3>신선한 치약</h3>
@@ -79,22 +85,38 @@ const Home = () => (
       </Col>
     </Row>
 
+    {/* 나쁜 성분 빼기 */}
     <Row id="bad-stuff-row">
-      <h3>나쁜 성분 빼기</h3>
-      <h4>SLS(합성계면활성제), 인공L-멘톨, 파라벤, 트리클로산, 인공색소,
-        벤조산, 인공방부제, 광물성오일, CMTI-MIT(가습기살균제 성분)
-      </h4>
-      <br />
-      <OverlayTrigger trigger={['hover', 'focus']} placement="bottom" overlay={popoverHoverFocus}>
-        <h4 id="SLS-info">합성계면활성제란
-          <img className="question-mark" src={questionMark} alt="#" />
-        </h4>
-      </OverlayTrigger>
+      <Col id="bad-stuff-col" md={8} sm={12} xs={12}>
+        <h4>SLS(합성계면활성제), 인공L-멘톨, 파라벤, 트리클로산, 인공색소,</h4>
+        <h4>벤조산, 인공방부제, 광물성오일, CMTI-MIT(가습기살균제 성분)</h4>
+        <br />
+        <OverlayTrigger trigger={['hover', 'focus', 'click']} placement="bottom" overlay={popoverHoverFocus}>
+          <h4 id="SLS-info">합성계면활성제란
+            <img className="question-mark" src={questionMark} alt="#" />
+          </h4>
+        </OverlayTrigger>
+      </Col>
+
+      <Col id="minus-title" md={4} sm={6} xs={6}>
+        <p>나쁜성분</p>
+        <p>빼기</p>
+      </Col>
+
+      {/* 좋은 성분 더하기 */}
+      <Col id="plus-title" md={4} sm={6} xs={6}>
+        <p>좋은성분</p>
+        <p>더하기</p>
+      </Col>
+
+      <Col md={8} sm={12} xs={12}>
+        <img id="good-pictogram" src={goodPictogram} alt="#" />
+      </Col>
     </Row>
 
+    {/*
     <Row id="good-stuff-row">
-      <h3>좋은 성분 더하기</h3>
-      <div className="good-stuff">
+      <Col md={8} className="good-stuff">
         <OverlayTrigger placement="bottom" overlay={tooltip1}>
           <Col className="good-stuff-column" xs={12} sm={2} md={2}>
             <div className="good-stuff-image-box">
@@ -136,9 +158,11 @@ const Home = () => (
             <h5>유기농 에코서트 인증</h5>
           </Col>
         </OverlayTrigger>
-      </div>
+      </Col>
     </Row>
+    */}
   </div>
 );
 
 export default Home;
+

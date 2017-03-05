@@ -49,7 +49,7 @@ class Scroller extends Component {
             duration={550}
             offset={this.state.offsetHeight}
           >
-            home
+            Home
           </Link>
           <Link
             activeClass="active"
@@ -60,7 +60,7 @@ class Scroller extends Component {
             duration={500}
             offset={this.state.offsetHeight}
           >
-            product
+            Product
           </Link>
           <Link
             activeClass="active"
@@ -71,7 +71,7 @@ class Scroller extends Component {
             duration={500}
             offset={this.state.offsetHeight}
           >
-            community
+            Community
           </Link>
           <Link
             activeClass="active"
@@ -82,7 +82,7 @@ class Scroller extends Component {
             duration={500}
             offset={this.state.offsetHeight}
           >
-            dr.choi
+            Dr.Choi
           </Link>
         </nav>
 

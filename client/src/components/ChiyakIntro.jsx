@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Jumbotron } from 'react-bootstrap';
 import './ChiyakIntro.css';
-import capture from '../img/capture.png';
+// import capture from '../img/capture.png';
 
 const vitaminVideoSrc = 'https://s3.ap-northeast-2.amazonaws.com/chiyak.homepage/vitamin_video.mp4';
 
@@ -36,15 +36,16 @@ class ChiyakIntro extends Component {
       <div className="chiyakintro-container">
         <Row>
           <Col><h1>치약의 개념을 바로잡다!</h1></Col>
-          <Col><h3>Choi’s가 개발하고, Choice한 좋은치약</h3></Col>
         </Row>
         <Row>
+          {/*
           <Col xs={12} sm={6} md={6} className={`intro ${this.state.broadCastClass}`}>
             <br />
             <img className="capture" src={capture} alt="#" />
           </Col>
-          <Col xs={12} sm={6} md={6} className="intro">
-            {/* 비타민 출연 동영상 */}
+          */}
+          {/* 비타민 출연 동영상 */}
+          <Col xs={12} sm={12} md={12} className="intro">
             <h4 id="video-title">이 갈리는 칫솔질?</h4>
             <video // eslint-disable-line jsx-a11y/no-static-element-interactions
               id="vitaminVideo"

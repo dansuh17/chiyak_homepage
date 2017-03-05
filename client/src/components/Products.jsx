@@ -9,6 +9,9 @@ const Products = () => (
   <div className="product-container">
     <Row>
       <Row>
+        <div className="product-title">
+          <h1>Choi’s가 개발하고, Choice한 좋은치약</h1>
+        </div>
         <Col className="product-imagebox" xs={12} sm={8} md={8}>
           <img src={productImage} role="presentation" />
         </Col>

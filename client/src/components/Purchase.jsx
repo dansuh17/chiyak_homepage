@@ -15,10 +15,6 @@ const onlineStores = [
     url: 'http://www.doctorjayce.com',
   },
   {
-    name: '당119닷컴',
-    url: 'http://dang119.com',
-  },
-  {
     name: '에브리데이스마일',
     url: 'http://everydaysmile.co.kr',
   },
