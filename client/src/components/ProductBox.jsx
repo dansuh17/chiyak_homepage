@@ -30,15 +30,6 @@ const ProductBox = props => (
 
     <Row><h2>{props.headerTwo}</h2></Row>
 
-    {/* 제품 상세설명 - 항목 개수는 4개로 제한 */}
-    <Row className="detailsRow">
-      {
-        props.details.map((detail, index) => (
-          <Col sm={12} xs={12} md={3} key={index}>{detail}</Col>
-        ))
-      }
-    </Row>
-
     {/* 성분 표시 */}
     <Row>
       <Col className="ingredientBox">
@@ -55,7 +46,6 @@ ProductBox.propTypes = {
   subtitle: PropTypes.string,
   headerTwo: PropTypes.string,
   ingredients: PropTypes.string,
-  details: PropTypes.arrayOf(PropTypes.string),
   quote: PropTypes.string,
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductBox from './ProductBox';
-import placeholderimg from '../img/products.jpeg';
+import careImage from '../img/chiyak_care.jpg';
+import smileImage from '../img/chiyak_smile.jpg';
 
 const smileDetails = [
   '천연 페퍼민트의 상쾌함과 시나몬의 독특하면서도 단맛의 청량감',
@@ -32,9 +33,9 @@ const ProductDetail = () => (
     <ProductBox
       name="goodChiyak_smile"
       productTitle={'좋은치약 smile'}
-      imgSrc={placeholderimg}
+      imgSrc={smileImage}
       subtitle={'페퍼민트오일의 부드러움'}
-      headerTwo={'요리사, 소믈리에, 바리스타 등 미각을 보호해 주는 치약'}
+      headerTwo={'요리사 소믈리에 바리스타 등 전문가들도 선호하는 미각을 보호하는 치약'}
       details={smileDetails}
       ingredients={smileIngredients}
       quote={'"칫솔질 후에도 과일 맛을 그대로 즐길 수 있다?"'}
@@ -42,9 +43,9 @@ const ProductDetail = () => (
     <ProductBox
       name="goodChiyak_clear"
       productTitle={'좋은치약 care'}
-      imgSrc={placeholderimg}
+      imgSrc={careImage}
       subtitle={'매스틱오일의 부드러움'}
-      headerTwo={'어린이, 임산부, 노인 등 연약한 입안을 보호해 주는 치약'}
+      headerTwo={'부드러운 치약을 선호하는 일반인뿐만 아니라 어린이, 임산부, 노인, 환자 등 입안의 특별한 관리를 필요로 하는 분들의 연약한 입안을 보호해 주는 치약'}
       details={careDetails}
       ingredients={careIngredients}
       quote={'"입안이 아파서 칫솔질을 할 수가 없어요"'}

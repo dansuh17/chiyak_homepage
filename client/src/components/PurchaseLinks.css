@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: center;
   background-color: #b59580;
-  margin: 3% 20% 5% 20%;
+  margin: 30px 0 50px 0;
   border-radius: 10px;
 }
 
@@ -16,9 +16,10 @@
 .purchaselink-item {
   padding: 3%;
   font-size: 1.4em;
+  text-decoration: none;
 }
 
 .purchaselink-item:hover{
-  color : #4f391c;
+  color : white;
 }
 

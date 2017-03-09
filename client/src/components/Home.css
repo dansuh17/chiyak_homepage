@@ -1,5 +1,5 @@
 .MainDiv {
-  background-image: url('../img/img10.jpg');
+  background-image: url('../img/leaf.jpg');
   background-size: 100% 100%;
   max-width: 100%; /* Never scales above its original size */
 }
@@ -20,14 +20,6 @@ a:hover {
 
 img {
   width: 100%;
-}
-
-.TitleCaption {
-  font-family: 'nanum_yet_gothic', 'modern_gothic', sans-serif;
-  padding-top: 10%;
-  padding-bottom: 30%;
-  padding-left: 30px;
-  color: white;
 }
 
 .home-subtitle1 {
@@ -216,6 +208,7 @@ h5 {
 }
 
 #SLS-info {
+  text-align: center;
   color: gray;
 }
 

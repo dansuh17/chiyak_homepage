@@ -1,13 +1,8 @@
 import React from 'react';
 import { Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
 import questionMark from '../img/question_mark.png';
-// import leaf from '../img/leaf.png';
-// import smile from '../img/smile.png';
-// import teeth from '../img/teeth.png';
-// import flower from '../img/flower.png';
-// import plus from '../img/plus.png';
-// import minus from '../img/minus-symbol.png';
-// import plusButton from '../img/plus-button.png';
+// import leaf from '../img/leaf.jpg';
+import fmtlMain from '../img/main_fmtl_low.jpg';
 import goodPictogram from '../img/pictograms.png';
 import './Home.css';
 
@@ -25,48 +20,16 @@ const popoverHoverFocus = (
   </Popover>
 );
 
-/*
-const tooltip1 = (
-  <Tooltip className="goodstuff-tooltip" id="tooltip1">
-    <p>칫솔질 후에도 과일 맛이 그대로</p>
-    <p>누구나 안심하고 쓸 수 있는 자연거품</p>
-  </Tooltip>
-);
-
-const tooltip2 = (
-  <Tooltip className="goodstuff-tooltip" id="tooltip2">
-    <p>Hydro particle 항산화 비타민</p>
-    <p>입안에서부터 시작되는 건강 활력소</p>
-  </Tooltip>
-);
-
-const tooltip3 = (
-  <Tooltip className="goodstuff-tooltip" id="tooltip3">
-    <p>치아구조와 유사한 물질</p>
-    <p>치아를 튼튼하게 하고 시린이 예방</p>
-  </Tooltip>
-);
-
-const tooltip4 = (
-  <Tooltip className="goodstuff-tooltip" id="tooltip4">
-    <p>카모마일, 세이지, 유칼립투스, 알로에</p>
-    <p>입냄새를 제거, 연약한 입 안을 보호</p>
-  </Tooltip>
-);
-*/
-
 const Home = () => (
   <div>
-    <div className="col12 MainDiv">
-      <h1 className="col5 TitleCaption">From Mouth To Life</h1>
-    </div>
+    <img src={fmtlMain} alt="#" />
     <p className="home-subtitle1">
       <bold>치약의 개념을 바로잡다</bold>
     </p>
     <h3>좋은 성분을 넣기 이전에 나쁜 성분을 빼야 합니다</h3>
     <Row className="row-padding">
       <Col className="home-subsection" xs={12} sm={12} md={4}>
-        <h3>신선한 치약</h3>
+        <h3>맛있는 치약</h3>
         <div className="subsection-body">
           이를 닦고 귤을 맛있게 먹을 수 있는 치약
         </div>

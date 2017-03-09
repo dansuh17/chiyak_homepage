@@ -72,36 +72,3 @@
   }
 }
 
-/*
-.broadcast-history {
-  max-height: 0;
-  visibility: hidden;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, visibility 0.5s linear;
-}
-
-.show-history {
-  visibility: visible;
-  max-height: 1000px;
-  transition: max-height 0.5s ease-in;
-}
-*/
-
-.show-history-button {
-  margin: auto;
-  background-color: white;
-  display: block;
-  width: 70%;
-  max-width: 200px;
-  border: 1.5px black solid;
-  border-radius: 7px;
-  padding: 8px;
-  transition: background-color 0.5s;
-  font-size: 0.8em;
-}
-
-.show-history-button:hover {
-  background-color: #B39292;
-  transition: background-color 0.5s;
-}
-
