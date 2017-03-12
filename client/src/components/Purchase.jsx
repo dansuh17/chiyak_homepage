@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row } from 'react-bootstrap';
+import { ButtonGroup, DropdownButton, MenuItem, Row } from 'react-bootstrap';
 import PurchaseLinks from './PurchaseLinks';
 import ProductDetail from './ProductDetail';
 import stores from '../stores';  // eslint-disable-line
@@ -102,6 +102,40 @@ class Purchase extends Component {
   }
 
   render() {
+    const StoreButtons = () => {
+      const storeList = [];
+      for (let i = 0; i < stores.length; i += 1) {
+        storeList.push(
+          <MenuItem eventKey={i}>{stores[i].name}</MenuItem>);
+      }
+
+      const areaMenu = {};
+      let menuItem = null;
+      let area = '';
+
+      for (let i = 0; i < storeList.length; i += 1) {
+        menuItem = <MenuItem eventKey={i} key={i}>{stores[i].name}</MenuItem>;
+        area = stores[i].area;
+        if (!Object.prototype.hasOwnProperty.call(areaMenu, area)) {
+          areaMenu[area] = [];
+        }
+
+        areaMenu[area].push(menuItem);
+      }
+
+      const menulist = [];
+      for (area in areaMenu) {  // eslint-disable-line
+        if (Object.prototype.hasOwnProperty.call(areaMenu, area)) {
+          menulist.push(
+            <DropdownButton title={area} id={area} key={area}>
+              {areaMenu[area]}
+            </DropdownButton>);
+        }
+      }
+
+      return <ButtonGroup justified>{menulist}</ButtonGroup>;
+    };
+
     return (
       <div>
         <div className="purchase-box">
@@ -115,6 +149,7 @@ class Purchase extends Component {
           <p className="info-text">* 지도를 움직여 집 근처 판매점을 찾아보세요!</p>
           <div id="naverMap" className="map" />
         </div>
+        <StoreButtons />
         <ProductDetail />
       </div>
     );

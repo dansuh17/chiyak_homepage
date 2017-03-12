@@ -7,6 +7,7 @@ const offlineStores = [
     lat: 37.562954,
     lng: 126.941679,
     tel: '',
+    area: '서울',
   },
   {
     name: '연세대학교 의료기매장',
@@ -14,6 +15,7 @@ const offlineStores = [
     lat: 37.562321,
     lng: 126.940976,
     tel: '',
+    area: '서울',
   },
   {
     name: '힐링앤뷰티',
@@ -21,6 +23,7 @@ const offlineStores = [
     lat: 37.561197,
     lng: 126.938684,
     tel: '02-2227-8270',
+    area: '서울',
   },
   {
     name: '세연약국',
@@ -28,6 +31,7 @@ const offlineStores = [
     lat: 37.562741,
     lng: 126.942443,
     tel: '02-364-6141',
+    area: '서울',
   },
   {
     name: '서울대학교 치과대학 구강위생용품점',
@@ -35,6 +39,7 @@ const offlineStores = [
     lat: 37.577974,
     lng: 126.999574,
     tel: '02-3676-2080',
+    area: '서울',
   },
   {
     name: '서울대학교병원 유민의료기 본원',
@@ -42,6 +47,7 @@ const offlineStores = [
     lat: 37.577974,
     lng: 126.999574,
     tel: '02-747-9580',
+    area: '서울',
   },
   {
     name: '서울대학교병원 유민의료기 암병동',
@@ -49,6 +55,7 @@ const offlineStores = [
     lat: 37.578721,
     lng: 126.997561,
     tel: '02-766-9580',
+    area: '서울',
   },
   {
     name: '연세베스트덴치과',
@@ -56,6 +63,7 @@ const offlineStores = [
     lat: 37.490764,
     lng: 126.923188,
     tel: '02-836-2223,4',
+    area: '서울',
   },
   {
     name: '새연세부부치과',
@@ -63,6 +71,7 @@ const offlineStores = [
     lat: 37.483649,
     lng: 126.972500,
     tel: '02-522-1865',
+    area: '서울',
   },
   {
     name: '이사랑치과',
@@ -70,6 +79,7 @@ const offlineStores = [
     lat: 37.483102,
     lng: 126.973723,
     tel: '02-522-2875',
+    area: '서울',
   },
   {
     name: '연세미치과의원',
@@ -77,6 +87,7 @@ const offlineStores = [
     lat: 37.613681,
     lng: 126.911168,
     tel: '02-385-7912',
+    area: '서울',
   },
   {
     name: '치아나라치과의원',
@@ -84,6 +95,7 @@ const offlineStores = [
     lat: 37.621202,
     lng: 126.918813,
     tel: '02-3157-2871',
+    area: '서울',
   },
   {
     name: '홍순호치과의원',
@@ -91,6 +103,7 @@ const offlineStores = [
     lat: 37.516200,
     lng: 127.020601,
     tel: '02-3446-2828',
+    area: '서울',
   },
   {
     name: '닥터프라임치과의원',
@@ -98,6 +111,7 @@ const offlineStores = [
     lat: 37.498617,
     lng: 127.028028,
     tel: '02-563-5200',
+    area: '서울',
   },
   {
     name: '화곡서울약국',
@@ -105,6 +119,7 @@ const offlineStores = [
     lat: 37.548139,
     lng: 126.836633,
     tel: '02-2692-3800',
+    area: '서울',
   },
   {
     name: '강서예치과의원',
@@ -112,6 +127,7 @@ const offlineStores = [
     lat: 37.556070,
     lng: 126.840219,
     tel: '02-3661-7520',
+    area: '서울',
   },
   {
     name: '임플란티아치과',
@@ -119,6 +135,7 @@ const offlineStores = [
     lat: 37.477565,
     lng: 127.044200,
     tel: '02-589-0222',
+    area: '서울',
   },
   {
     name: '이완승치과의원',
@@ -126,6 +143,7 @@ const offlineStores = [
     lat: 37.476921,
     lng: 127.029824,
     tel: '02-573-7510',
+    area: '서울',
   },
   {
     name: '연세참소망치과',
@@ -133,6 +151,7 @@ const offlineStores = [
     lat: 37.489985,
     lng: 126.927099,
     tel: '02-888-2872',
+    area: '서울',
   },
   {
     name: '연세건치과의원',
@@ -140,6 +159,7 @@ const offlineStores = [
     lat: 37.555669,
     lng: 126.973766,
     tel: '02-755-0882',
+    area: '서울',
   },
   {
     name: '김성철치과의원',
@@ -147,6 +167,7 @@ const offlineStores = [
     lat: 37.564296,
     lng: 126.968451,
     tel: '02-738-9897',
+    area: '서울',
   },
   {
     name: '메이연세치과',
@@ -154,6 +175,7 @@ const offlineStores = [
     lat: 37.490575,
     lng: 127.130219,
     tel: '02-401-0275',
+    area: '서울',
   },
   {
     name: '연세덴티프로치과의원',
@@ -161,6 +183,7 @@ const offlineStores = [
     lat: 37.670247,
     lng: 126.761954,
     tel: '031-922-8100',
+    area: '경기 / 인천',
   },
   {
     name: '연세물방울치과',
@@ -168,6 +191,7 @@ const offlineStores = [
     lat: 37.667694,
     lng: 126.800367,
     tel: '031-907-0790',
+    area: '경기 / 인천',
   },
   {
     name: '세호의료기',
@@ -175,6 +199,7 @@ const offlineStores = [
     lat: 37.664057,
     lng: 126.785520,
     tel: '031-904-3429',
+    area: '경기 / 인천',
   },
   {
     name: '연세강치과',
@@ -182,6 +207,7 @@ const offlineStores = [
     lat: 36.987281,
     lng: 127.102043,
     tel: '031-692-8828',
+    area: '경기 / 인천',
   },
   {
     name: '연세치과의원',
@@ -189,6 +215,7 @@ const offlineStores = [
     lat: 37.279484,
     lng: 127.016438,
     tel: '031-241-7393',
+    area: '경기 / 인천',
   },
   {
     name: '이화약국',
@@ -196,6 +223,7 @@ const offlineStores = [
     lat: 37.283638,
     lng: 127.447538,
     tel: '031-632-8998',
+    area: '경기 / 인천',
   },
   {
     name: '강충구치과의원',
@@ -203,6 +231,7 @@ const offlineStores = [
     lat: 37.443679,
     lng: 126.739029,
     tel: '032-463-7300',
+    area: '경기 / 인천',
   },
   {
     name: '크린팜대학약국',
@@ -210,6 +239,7 @@ const offlineStores = [
     lat: 37.542451,
     lng: 126.683799,
     tel: '032-567-8874',
+    area: '경기 / 인천',
   },
   {
     name: '아름다운치과',
@@ -217,6 +247,7 @@ const offlineStores = [
     lat: 35.163479,
     lng: 128.981102,
     tel: '051-323-2875',
+    area: '부산',
   },
   {
     name: '이현치과의원',
@@ -224,6 +255,7 @@ const offlineStores = [
     lat: 35.878417,
     lng: 128.550221,
     tel: '053-552-0247',
+    area: '대구',
   },
   {
     name: '참열린약국',
@@ -231,6 +263,7 @@ const offlineStores = [
     lat: 35.843592,
     lng: 128.568018,
     tel: '053-628-7359',
+    area: '대구',
   },
   {
     name: '만나약국',
@@ -238,6 +271,7 @@ const offlineStores = [
     lat: 35.864250,
     lng: 128.599966,
     tel: '053-425-5025',
+    area: '대구',
   },
   {
     name: '선치과병원',
@@ -245,6 +279,7 @@ const offlineStores = [
     lat: 36.337863,
     lng: 127.414038,
     tel: '042-251-5000',
+    area: '대전',
   },
   {
     name: '더희망약국',
@@ -252,6 +287,7 @@ const offlineStores = [
     lat: 36.351505,
     lng: 127.382580,
     tel: '042-488-4050',
+    area: '대전',
   },
   {
     name: '전남대학교 치과대학병원 구강용품점',
@@ -259,6 +295,7 @@ const offlineStores = [
     lat: 35.172335,
     lng: 126.900592,
     tel: '062-530-5500',
+    area: '광주',
   },
   {
     name: '연세이로운치과',
@@ -266,6 +303,7 @@ const offlineStores = [
     lat: 36.089211,
     lng: 129.387271,
     tel: '054-251-7528',
+    area: '포항',
   },
   {
     name: '리앤박치과',
@@ -273,6 +311,7 @@ const offlineStores = [
     lat: 36.091273,
     lng: 129.387967,
     tel: '054-243-2804',
+    area: '포항',
   },
   {
     name: '익산약국',
@@ -280,6 +319,7 @@ const offlineStores = [
     lat: 35.963883,
     lng: 126.959063,
     tel: '063-841-8100',
+    area: '익산',
   },
   {
     name: '꼬마이치과',
@@ -287,6 +327,7 @@ const offlineStores = [
     lat: 34.754296,
     lng: 127.653855,
     tel: '061-685-2276',
+    area: '여수',
   },
   {
     name: '연세김치과',
@@ -294,6 +335,7 @@ const offlineStores = [
     lat: 36.600753,
     lng: 126.667097,
     tel: '041-631-2858',
+    area: '홍성',
   },
 ];
 
