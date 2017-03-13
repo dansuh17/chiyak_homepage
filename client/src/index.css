@@ -3,11 +3,14 @@ body {
   padding: 0;
   font-family: sans-serif;
   height: 100%;
-  min-width: 1080px;
+  min-width: 1080px;  /* fixed width size on desktops */
 }
 
 /* iPhone 5 or later */
-@media screen and (max-device-width: 600px) and (min-device-width: 320px) {
+@media screen and (max-width: 599px) {
+  body {
+    min-width: 0;
+  }
 }
 
 /* Box size includes the margins and paddings */
