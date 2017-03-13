@@ -27,20 +27,13 @@
   padding: 1% 3% 3% 3%;
 }
 
-@media screen and (max-width: 860px) and (min-width: 768px) {
-  #product-imagebox {
-    padding-top: 3%;
-  }
-}
-
 #linkbox-container {
-  padding: 0 3% 3% 2.5%;
+  padding: 0 2% 10px 2%;
 }
 
 .chiyakSection {
+  padding-top: 0 !important;
   color: #4f391c;
-  padding: 0 10%;
-  margin-top: 3%;
 }
 
 #chiyak-smile {
@@ -74,9 +67,9 @@
 }
 
 .go-to-purchase:hover {
-  color: black;
-  background-color: #B39292;
-  transition: background-color 0.5s;
+  color: white;
+  background-color: #b59580;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .product-quote {

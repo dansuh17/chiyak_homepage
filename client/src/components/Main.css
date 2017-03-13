@@ -1,10 +1,3 @@
-.header2 {
-  top: 100px;
-  background-image: none;
-  background-color: lightblue;
-  border-color: lightblue;
-}
-
 .nav-collapse-container {
   /* 항목들 중앙정렬시켜주는 부분 */
   float: right;
