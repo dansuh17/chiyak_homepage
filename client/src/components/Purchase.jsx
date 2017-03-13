@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ButtonGroup, DropdownButton, MenuItem, Row } from 'react-bootstrap';
+import { Col, DropdownButton, MenuItem, Row } from 'react-bootstrap';
 import PurchaseLinks from './PurchaseLinks';
 import ProductDetail from './ProductDetail';
 import stores from '../stores';  // eslint-disable-line
@@ -26,9 +26,12 @@ class Purchase extends Component {
 
     this.state = {
       map: null,
+      infoWindows: [],
+      markers: [],
     };
 
     this.onMapSetup = this.onMapSetup.bind(this);
+    this.onMenuItemClick = this.onMenuItemClick.bind(this);
   }
 
   componentWillMount() {
@@ -51,6 +54,8 @@ class Purchase extends Component {
       zoomControl: true,
     });
 
+    const infoWindows = [];
+    const markers = [];
     for (let i = 0; i < stores.length; i++) {
       // 지도에 마커 뿌리기
       const marker = new naver.maps.Marker({
@@ -85,20 +90,31 @@ class Purchase extends Component {
           infoWindow.open(map, marker);
         }
       });
+
+      infoWindows.push(infoWindow);
+      markers.push(marker);
     }
     /* eslint-enable */
+
     map.setOptions({
       scrollWheel: false,
     });
 
-    this.onMapSetup(map);
+    this.onMapSetup(map, infoWindows, markers);
   }
 
-  onMapSetup(map) {
+  onMapSetup(map, infoWindows, markers) {
     // componentWillMount의 무한루프 방지
     this.setState({
       map,
+      infoWindows,
+      markers,
     });
+  }
+
+  onMenuItemClick(eventKey) {
+    this.state.infoWindows[eventKey].open(
+      this.state.map, this.state.markers[eventKey]);
   }
 
   render() {
@@ -127,13 +143,13 @@ class Purchase extends Component {
       for (area in areaMenu) {  // eslint-disable-line
         if (Object.prototype.hasOwnProperty.call(areaMenu, area)) {
           menulist.push(
-            <DropdownButton title={area} id={area} key={area}>
+            <DropdownButton title={area} id={area} key={area} onSelect={this.onMenuItemClick}>
               {areaMenu[area]}
             </DropdownButton>);
         }
       }
 
-      return <ButtonGroup justified>{menulist}</ButtonGroup>;
+      return <Col md={12} sm={12} xs={12} id="store-area-dropdown">{menulist}</Col>;
     };
 
     return (
@@ -147,9 +163,9 @@ class Purchase extends Component {
         <div className="purchase-box">
           <h2 className="purchase-title">오프라인 판매처</h2>
           <p className="info-text">* 지도를 움직여 집 근처 판매점을 찾아보세요!</p>
+          <StoreButtons />
           <div id="naverMap" className="map" />
         </div>
-        <StoreButtons />
         <ProductDetail />
       </div>
     );

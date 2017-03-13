@@ -49,7 +49,7 @@ const Home = () => (
 
     {/* 나쁜 성분 빼기 */}
     <Row id="bad-stuff-row">
-      <Col id="bad-stuff-col" md={8} sm={12} xs={12}>
+      <Col id="bad-stuff-col" md={8} sm={8} xs={12}>
         <h4>SLS(합성계면활성제), 인공L-멘톨, 파라벤, 트리클로산, 인공색소,</h4>
         <h4>벤조산, 인공방부제, 광물성오일, CMTI-MIT(가습기살균제 성분)</h4>
         <br />
@@ -60,18 +60,18 @@ const Home = () => (
         </OverlayTrigger>
       </Col>
 
-      <Col id="minus-title" md={4} sm={6} xs={6}>
+      <Col id="minus-title" md={4} sm={4} xs={6}>
         <p>나쁜성분</p>
         <p>빼기</p>
       </Col>
 
       {/* 좋은 성분 더하기 */}
-      <Col id="plus-title" md={4} sm={6} xs={6}>
+      <Col id="plus-title" md={4} sm={4} xs={6}>
         <p>좋은성분</p>
         <p>더하기</p>
       </Col>
 
-      <Col md={8} sm={12} xs={12}>
+      <Col md={8} sm={8} xs={12}>
         <img id="good-pictogram" src={goodPictogram} alt="#" />
       </Col>
     </Row>
