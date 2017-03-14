@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Row, Col } from 'react-bootstrap';
-import chiyakGeneral from '../img/chiyak_general.jpg';
+import chiyakGeneral from '../img/dish.png';
 import chiyakVert from '../img/go_to_purchase.jpg';
 import shopIcon from '../img/shop.png';
 import './Products.css';

@@ -10,7 +10,7 @@ const Header = () => (
         <a id="logobox" href="/"><img className="logoimg" src={logoimg} alt="#" /></a>
       </Navbar.Brand>
       <Nav>
-        <NavItem className="nav-item">{'"치약의 개념을 바로잡다"'}</NavItem>
+        <NavItem className="nav-item">{'New Paradigm of toothpaste'}</NavItem>
       </Nav>
     </Navbar.Header>
   </Navbar>
