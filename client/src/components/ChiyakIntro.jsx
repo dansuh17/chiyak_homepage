@@ -35,7 +35,7 @@ class ChiyakIntro extends Component {
     return (
       <div className="chiyakintro-container">
         <Row>
-          <Col><h1>{'Dr.Choi\'s Choice, 좋은치약!'}</h1></Col>
+          <Col><h1>{'Dr.Choi\'s Choice, '}<br className="mobile-linebreak" />{'좋은치약!'}</h1></Col>
         </Row>
         <Row>
           {/* 비타민 출연 동영상 */}

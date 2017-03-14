@@ -35,3 +35,8 @@
 #store-area-dropdown {
   margin: 0 auto;  /* center align */
 }
+
+.dropdown-buttons {
+  margin: 10px 5px;
+  background-image: none;
+}

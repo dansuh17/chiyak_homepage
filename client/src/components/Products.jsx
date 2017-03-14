@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Glyphicon } from 'react-bootstrap';
 import chiyakGeneral from '../img/chiyak_general.jpg';
 import chiyakVert from '../img/go_to_purchase.jpg';
-import shopIcon from '../img/shop.png';
 import './Products.css';
 
 const Products = () => (
@@ -11,7 +10,7 @@ const Products = () => (
     <Row>
       <Row>
         <div className="product-title">
-          <h1>Choi’s가 개발하고, Choice한 좋은치약</h1>
+          <h1>Choi’s가 개발하고, <br className="mobile-linebreak" />Choice한 좋은치약</h1>
         </div>
         <Col className="product-imagebox" xs={12} sm={8} md={8}>
           <img src={chiyakGeneral} role="presentation" />
@@ -32,8 +31,8 @@ const Products = () => (
             {'만들었습니다. '}
           </Col>
           <Col xs={6} xsOffset={3} smOffset={0} sm={12} md={12}>
-            <Link to="purchase" className="go-to-purchase">
-              제품보기
+            <Link to="productDetail" className="go-to-purchase">
+              제품보기 <Glyphicon glyph="search" />
             </Link>
           </Col>
         </Col>
@@ -58,8 +57,7 @@ const Products = () => (
         </Col>
         <Col xs={6} xsOffset={3} smOffset={0} sm={12} md={12}>
           <Link to="purchase" className="go-to-purchase">
-            사러가기
-            <img className="purchase-icon" src={shopIcon} alt="#" />
+            사러가기 <Glyphicon glyph="shopping-cart" />
           </Link>
         </Col>
       </Col>

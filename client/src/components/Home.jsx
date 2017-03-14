@@ -23,9 +23,9 @@ const Home = () => (
   <div>
     <img src={fmtlMain} alt="#" />
     <p className="home-subtitle1">
-      <bold>치약의 개념을 바로잡다</bold>
+      <bold>치약의 개념을<br className="mobile-linebreak" /> 바로잡다</bold>
     </p>
-    <h3>좋은 성분을 넣기 이전에 나쁜 성분을 빼야 합니다</h3>
+    <h3>좋은 성분을 넣기 이전에<br className="mobile-linebreak" /> 나쁜 성분을 빼야 합니다</h3>
     <Row className="row-padding">
       <Col className="home-subsection" xs={12} sm={4} md={4}>
         <h3>맛있는 치약</h3>
@@ -61,13 +61,13 @@ const Home = () => (
       </Col>
 
       <Col id="minus-title" md={4} sm={4} xs={6}>
-        <p>나쁜성분</p>
+        <p>나쁜<br className="mobile-linebreak" />성분</p>
         <p>빼기</p>
       </Col>
 
       {/* 좋은 성분 더하기 */}
       <Col id="plus-title" md={4} sm={4} xs={6}>
-        <p>좋은성분</p>
+        <p>좋은<br className="mobile-linebreak" />성분</p>
         <p>더하기</p>
       </Col>
 

@@ -6,10 +6,18 @@ body {
   min-width: 1080px;  /* fixed width size on desktops */
 }
 
+.mobile-linebreak {
+  display: none;
+}
+
 /* iPhone 5 or later */
-@media screen and (max-width: 599px) {
+@media all and (max-width: 599px) {
   body {
     min-width: 0;
+  }
+
+  .mobile-linebreak {
+    display: inline;
   }
 }
 

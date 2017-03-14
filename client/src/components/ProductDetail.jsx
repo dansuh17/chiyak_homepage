@@ -45,7 +45,7 @@ const ProductDetail = () => (
       productTitle={'좋은치약 care'}
       imgSrc={careImage}
       subtitle={'매스틱오일의 부드러움'}
-      headerTwo={'부드러운 치약을 선호하는 일반인뿐만 아니라 어린이, 임산부, 노인, 환자 등 입안의 특별한 관리를 필요로 하는 분들의 연약한 입안을 보호해 주는 치약'}
+      headerTwo={'부드러운 치약을 선호하는 일반인 뿐만 아니라 어린이, 임산부, 노인, 환자 등 입안의 특별한 관리를 필요로 하는 분들의 연약한 입안을 보호해 주는 치약'}
       details={careDetails}
       ingredients={careIngredients}
       quote={'"입안이 아파서 칫솔질을 할 수가 없어요"'}

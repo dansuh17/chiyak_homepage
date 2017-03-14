@@ -28,7 +28,11 @@ const ProductBox = props => (
       </Col>
     </Row>
 
-    <Row><h2>{props.headerTwo}</h2></Row>
+    <Row>
+      <Col md={8} sm={8} xs={10} mdOffset={2} smOffset={2} xsOffset={1}>
+        <h4>{props.headerTwo}</h4>
+      </Col>
+    </Row>
 
     {/* 성분 표시 */}
     <Row>

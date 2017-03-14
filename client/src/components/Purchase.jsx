@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Col, DropdownButton, MenuItem, Row } from 'react-bootstrap';
+import { Col, Dropdown, MenuItem, Row } from 'react-bootstrap';
 import PurchaseLinks from './PurchaseLinks';
-import ProductDetail from './ProductDetail';
 import stores from '../stores';  // eslint-disable-line
 import './Purchase.css';
 
@@ -112,23 +111,34 @@ class Purchase extends Component {
     });
   }
 
+  /*
+   * 드롭다운 메뉴 항목을 눌렀을 때 해당 상점의 정보창이 뜸
+   */
   onMenuItemClick(eventKey) {
+    // 지도의 중심을 옮긴다
+    this.state.map.setCenter(
+      new naver.maps.LatLng(stores[eventKey].lat, stores[eventKey].lng));  // eslint-disable-line
+    this.state.map.setZoom(10, true);  // 지도 확대
     this.state.infoWindows[eventKey].open(
       this.state.map, this.state.markers[eventKey]);
   }
 
   render() {
+    // 지역별 오프라인 판매점 드롭다운 버튼
     const StoreButtons = () => {
       const storeList = [];
       for (let i = 0; i < stores.length; i += 1) {
         storeList.push(
-          <MenuItem eventKey={i}>{stores[i].name}</MenuItem>);
+          <MenuItem eventKey={i}>
+            {stores[i].name}
+          </MenuItem>);
       }
 
       const areaMenu = {};
       let menuItem = null;
       let area = '';
 
+      // create menuitems per registered store
       for (let i = 0; i < storeList.length; i += 1) {
         menuItem = <MenuItem eventKey={i} key={i}>{stores[i].name}</MenuItem>;
         area = stores[i].area;
@@ -139,13 +149,24 @@ class Purchase extends Component {
         areaMenu[area].push(menuItem);
       }
 
+      // create separate dropdown buttons by area
       const menulist = [];
       for (area in areaMenu) {  // eslint-disable-line
         if (Object.prototype.hasOwnProperty.call(areaMenu, area)) {
           menulist.push(
-            <DropdownButton title={area} id={area} key={area} onSelect={this.onMenuItemClick}>
-              {areaMenu[area]}
-            </DropdownButton>);
+            <Dropdown
+              id={area}
+              key={area}
+              onSelect={this.onMenuItemClick}
+              bsStyle="default"
+            >
+              <Dropdown.Toggle className="dropdown-buttons">
+                {area}
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                {areaMenu[area]}
+              </Dropdown.Menu>
+            </Dropdown>);
         }
       }
 
@@ -162,11 +183,10 @@ class Purchase extends Component {
         </div>
         <div className="purchase-box">
           <h2 className="purchase-title">오프라인 판매처</h2>
-          <p className="info-text">* 지도를 움직여 집 근처 판매점을 찾아보세요!</p>
           <StoreButtons />
+          <p className="info-text">* 지도를 움직여 집 근처 판매점을 찾아보세요!</p>
           <div id="naverMap" className="map" />
         </div>
-        <ProductDetail />
       </div>
     );
   }
