@@ -1,4 +1,19 @@
 .footer {
   background: lightgray;
   z-index : 10;
+  font: 'Nanum Barun Gothic';
+}
+
+.vision {
+  text-align: left;
+  padding-left: 30px !important;
+}
+
+.footer-list-box {
+  text-align: left;
+  padding-left: 30px !important;
+}
+
+#addendum {
+  color: gray;
 }

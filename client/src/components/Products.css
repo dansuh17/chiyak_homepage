@@ -40,10 +40,6 @@
   color: #755ee3;
 }
 
-#chiyak-care {
-  color: #e36bb3;
-}
-
 @media screen and (max-width: 860px) {
   .chiyakSection h2 {
     margin-top: 0;
@@ -75,12 +71,7 @@
 .product-quote {
   font-size: 1.5em;
   color: gray;
-}
-
-@media screen and (max-width: 980px) and (min-width: 768px) {
-  .product-quote {
-    font-size: 1.2em;
-  }
+  padding-bottom: 0 !important;
 }
 
 .purchase-icon {
@@ -90,6 +81,15 @@
 }
 
 .product-det1 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   font-size: 1.2em;
 }
 
+.product-det1 p {
+  margin: 0;
+}
+
+#gganggan {
+  font-size: 2em;
+}

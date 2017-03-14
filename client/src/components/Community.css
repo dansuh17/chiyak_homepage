@@ -30,16 +30,8 @@ a {
   font-size: 1.2em;
 }
 
-.community-linkbox:hover h4 {
-  color:white;
-}
-
 .community-linkbox h2 {
   color: #4f391c;
-}
-
-.community-linkbox h4:hover{
-  color : white;
 }
 
 #community-imagebox {
@@ -48,4 +40,18 @@ a {
 
 #linkbox-container {
   padding: 0 3% 3% 3%;
+}
+
+#news_link {
+  width: 100%;
+  border: 1.5px black solid;
+  border-radius: 7px;
+  padding: 5% 20%;
+  font-size: 1.2em;
+  transition: background-color 0.5s;
+}
+
+#news_link:hover {
+  color: #4f391c;
+  background-color: white;
 }

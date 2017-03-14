@@ -45,15 +45,16 @@ const Products = () => (
       <Col id="linkbox-container" xs={12} sm={4} md={4}>
         <Col xs={12} sm={12} md={12}>
           <Col className="chiyakSection" md={12} sm={12} xs={12}>
-            <h2>좋은치약 <span id="chiyak-care">care</span></h2>
+            <h2>좋은치약</h2>
+          </Col>
+          <Col className="product-det1" xs={12} sm={12} md={12}>
+            <p>입 안은 먹는 곳의 시작이고,</p>
+            <p>신체 중에서 흡수력이 가장 높은 곳입니다.</p>
+            <p>하루 매일 치소 두세번 이상 칫솔질을 하는 우리...</p>
           </Col>
           <Col className="product-quote" xs={12} sm={12} md={12}>
-            {'"입안이 아파서 칫솔질을'}<br className="breakline" />
-            {'할 수가 없어요"'}
+            <p>이제는 치약도 <br /><span id="gganggan">깐깐</span>하게 고르세요!</p>
           </Col>
-        </Col>
-        <Col className="product-det1" xs={12} sm={12} md={12}>
-          {'부드러운 치약을 선호하는 일반인뿐만 아니라 어린이, 임산부, 노인, 환자 등 입안의 특별한 관리를 필요로 하는 분들의 연약한 입안을 보호해 주는 치약'}
         </Col>
         <Col xs={6} xsOffset={3} smOffset={0} sm={12} md={12}>
           <Link to="purchase" className="go-to-purchase">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Glyphicon } from 'react-bootstrap';
 import communityImage from '../img/neanderthal.jpeg';
 import shareImage from '../img/mongo-pic_low.jpg';
 import './Community.css';
@@ -26,11 +26,12 @@ const Community = () => (
           <img src={communityImage} role="presentation" />
         </Col>
         <Col id="linkbox-container" xs={12} sm={4} md={4}>
-          <a href="http://www.medium.com">
-            <Col className="community-linkbox" xs={12} sm={12} md={12}>
-              <h2>News</h2>
-              <h4>닥터초이스의 소식을 전해드립니다</h4>
-            </Col>
+          <Col className="community-linkbox" xs={12} sm={12} md={12}>
+            <h2>News</h2>
+            <h4>닥터초이스의 소식을 전해드립니다</h4>
+          </Col>
+          <a href="http://www.medium.com" id="news_link">
+            소식보기 <Glyphicon glyph="calendar" />
           </a>
         </Col>
       </Row>

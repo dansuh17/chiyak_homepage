@@ -5,7 +5,7 @@ import './SnsLink.css';
 const SnsLink = () => (
   <div>
     <Row className="snslink-row">
-      <Col xs={12} sm={12} md={3} mdOffset={9}>
+      <Col xs={12} sm={12} md={12}>
         <p className="Address">From Mouth To Life</p>
         <br />
         <p className="Address">닥터초이스 고객센터</p>
