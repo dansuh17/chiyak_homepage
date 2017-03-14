@@ -163,7 +163,13 @@ module.exports = {
           name: 'static/media/[name].[hash:8].[ext]'
         }
       }
-    ]
+    ],
+    postLoaders: [
+      {
+        test: /\.js[x]?$/,
+        loaders: ['es3ify-loader'],
+      }
+    ],
   },
   
   // We use PostCSS for autoprefixing only.
