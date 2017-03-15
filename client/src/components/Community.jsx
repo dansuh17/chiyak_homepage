@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
-import communityImage from '../img/neanderthal.jpeg';
+import communityImage from '../img/perth.jpeg';
 import shareImage from '../img/mongo-pic_low.jpg';
 import './Community.css';
 
