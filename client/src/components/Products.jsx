@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { Row, Col, Glyphicon } from 'react-bootstrap';
 import chiyakGeneral from '../img/dish.png';
 import chiyakVert from '../img/go_to_purchase.jpg';
+import certificates from '../img/certificates.jpg';
 import './Products.css';
 
 const Products = () => (
@@ -23,7 +24,7 @@ const Products = () => (
           </Col>
           <Col className="product-det1" xs={12} sm={12} md={12}>
             {'입안은 먹는 곳의 시작이며, 인체에서 흡수력이 가장'}
-            {'좋은 곳입니다. 하루에 적어도 2~3번의 칫솔질을 '}
+            {'좋은 곳입니다. 하루에 적어도 두세번의 칫솔질을 '}
             {'평생 해야 한다고 생각하면 치약의 나쁜 성분이 우리 '}
             {'몸속에 축적되어 가는 위험성을 간과해서는 안되기에 '}
             {'음식을 만드는 엄마의 정성스런 마음으로 입안이 '}
@@ -64,6 +65,12 @@ const Products = () => (
       </Col>
       <Col className="product-imagebox" xs={12} sm={8} md={8}>
         <img src={chiyakVert} role="presentation" />
+      </Col>
+    </Row>
+
+    <Row>
+      <Col md={10} mdOffset={1} xs={12} sm={12}>
+        <img src={certificates} alt="#" />
       </Col>
     </Row>
   </div>

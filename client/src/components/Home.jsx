@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row, OverlayTrigger, Popover } from 'react-bootstrap';
 import questionMark from '../img/question_mark.png';
-import fmtlMain from '../img/main_fmtl_low.jpg';
+import goodChiyakMain from '../img/good_chiyak_main.jpg';
 import goodPictogram from '../img/pictograms.png';
 import './Home.css';
 
@@ -21,7 +21,7 @@ const popoverHoverFocus = (
 
 const Home = () => (
   <div>
-    <img src={fmtlMain} alt="#" />
+    <img src={goodChiyakMain} alt="#" />
     <p className="home-subtitle1">
       <bold>치약의 개념을<br className="mobile-linebreak" /> 바로잡다</bold>
     </p>

@@ -28,8 +28,8 @@
   max-width: 70%;
 }
 
-#video-title {
-  color: #9595ea;
+h1 {
+  margin-bottom: 20px;
 }
 
 .drchoi-h {
@@ -43,6 +43,7 @@
 }
 
 .span {
+  font-family: 'NanumPen', 'Times New Roman', serif;
   position : relative;
   top : 120px;
   margin-left : 0%;

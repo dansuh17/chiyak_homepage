@@ -23,7 +23,6 @@ class Scroller extends Component {
   }
 
   componentDidMount() {
-    /*
     Events.scrollEvent.register('begin', (...args) => {
       console.log('begin', args);  // eslint-disable-line no-console
     });
@@ -31,7 +30,6 @@ class Scroller extends Component {
     Events.scrollEvent.register('end', (...args) => {
       console.log('end', args);  // eslint-disable-line no-console
     });
-    */
 
     scrollSpy.update();
   }
